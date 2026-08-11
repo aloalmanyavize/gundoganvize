@@ -1,0 +1,1 @@
+Gündoğan Vize deployment trigger — premium ülke sayfalarının Cloudflare tarafından yeniden yayınlanması için oluşturuldu.
