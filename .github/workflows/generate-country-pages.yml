@@ -1,0 +1,36 @@
+name: Generate Premium Country Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_tools/generate_country_pages.py'
+      - '.github/workflows/generate-country-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate country pages
+        run: python _tools/generate_country_pages.py
+      - name: Commit generated pages
+        run: |
+          git config user.name "gundoganvize-seo-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -- '*-vizesi/index.html'
+          if git diff --cached --quiet; then
+            echo "No country page changes"
+          else
+            git commit -m "Upgrade all Schengen country pages to premium SEO layout [skip ci]"
+            git push
+          fi
