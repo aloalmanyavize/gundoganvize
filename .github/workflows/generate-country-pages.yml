@@ -6,10 +6,17 @@ on:
     paths:
       - '_tools/generate_country_pages.py'
       - '.github/workflows/generate-country-pages.yml'
+  schedule:
+    # Her gün 06:15 UTC = Türkiye saatiyle 09:15 (UTC+3)
+    - cron: '15 6 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: gundoganvize-daily-seo
+  cancel-in-progress: false
 
 jobs:
   generate:
@@ -17,6 +24,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -31,6 +40,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No country page changes"
           else
-            git commit -m "Upgrade all Schengen country pages to premium SEO layout [skip ci]"
+            git commit -m "Daily SEO: refresh Schengen country pages [skip ci]"
             git push
           fi
