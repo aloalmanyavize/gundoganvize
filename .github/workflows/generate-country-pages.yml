@@ -32,6 +32,9 @@ jobs:
           python-version: '3.12'
       - name: Generate country pages
         run: python _tools/generate_country_pages.py
+      - name: Preserve manually researched country guides
+        run: |
+          git checkout HEAD -- norvec-vizesi/index.html
       - name: Commit generated pages
         run: |
           git config user.name "gundoganvize-seo-bot"
