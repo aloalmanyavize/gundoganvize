@@ -34,7 +34,10 @@ jobs:
         run: python _tools/generate_country_pages.py
       - name: Preserve manually researched country guides
         run: |
+          git checkout HEAD -- portekiz-vizesi/index.html
+          git checkout HEAD -- estonya-vizesi/index.html
           git checkout HEAD -- norvec-vizesi/index.html
+          git checkout HEAD -- finlandiya-vizesi/index.html
       - name: Commit generated pages
         run: |
           git config user.name "gundoganvize-seo-bot"
