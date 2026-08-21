@@ -1,0 +1,11 @@
+/*
+  X-Robots-Tag: index, follow, max-image-preview:large
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+/_tools/*
+  X-Robots-Tag: noindex, nofollow
+
+/.github/*
+  X-Robots-Tag: noindex, nofollow
