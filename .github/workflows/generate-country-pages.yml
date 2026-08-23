@@ -44,6 +44,7 @@ jobs:
           git checkout HEAD -- hollanda-vizesi/index.html
           git checkout HEAD -- isvec-vizesi/index.html
           git checkout HEAD -- cekya-vizesi/index.html
+          git checkout HEAD -- ispanya-vizesi/index.html
       - name: Commit generated pages
         run: |
           git config user.name "gundoganvize-seo-bot"
