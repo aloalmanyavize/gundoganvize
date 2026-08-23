@@ -3,4 +3,7 @@ Allow: /
 Disallow: /_tools/
 Disallow: /.github/
 
+User-agent: OAI-SearchBot
+Allow: /
+
 Sitemap: https://gundoganvize.com/sitemap.xml
