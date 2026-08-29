@@ -1,0 +1,11 @@
+# Gündoğan Vize
+
+> Türkiye'den yurt dışı vize başvuruları için ülke, başvuru türü, evrak hazırlığı ve süreç rehberleri sunan bağımsız Türkçe danışmanlık ve bilgi sitesi.
+
+## Ana kaynak
+- https://gundoganvize.com/
+
+## Kapsam
+Schengen, İngiltere, ABD, Kanada ve diğer vize kategorilerinde başvuru hazırlığı, evraklar, randevu ve seyahat planlama bilgileri.
+
+Bilgiler genel bilgilendirme amaçlıdır. Vize prosedürleri değişebileceği için resmî konsolosluk ve yetkili başvuru merkezi kaynakları başvuru öncesinde kontrol edilmelidir.
