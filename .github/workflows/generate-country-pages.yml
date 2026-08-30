@@ -51,6 +51,7 @@ jobs:
           git checkout HEAD -- isvicre-vizesi/index.html
           git checkout HEAD -- yunanistan-vizesi/index.html
           git checkout HEAD -- bulgaristan-vizesi/index.html
+          git checkout HEAD -- hirvatistan-vizesi/index.html
       - name: Commit generated pages
         run: |
           git config user.name "gundoganvize-seo-bot"
