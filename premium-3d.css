@@ -1,10 +1,10 @@
 /* Gündoğan Vize - premium 3D interaction layer */
-:where(.btn,.ghostBtn,.whiteBtn,.miniPhone,.miniWa,.wa,button){transition:transform .18s ease,box-shadow .18s ease,filter .18s ease;-webkit-tap-highlight-color:transparent;box-shadow:0 5px 0 rgba(5,31,67,.20),0 13px 25px rgba(18,104,211,.18),inset 0 1px 0 rgba(255,255,255,.34)!important;text-shadow:0 1px 0 rgba(0,0,0,.10)}
-:where(.btn,.ghostBtn,.whiteBtn,.miniPhone,.miniWa,.wa,button):hover{transform:translateY(-2px);filter:saturate(1.06) brightness(1.02);box-shadow:0 7px 0 rgba(5,31,67,.17),0 17px 31px rgba(18,104,211,.22),inset 0 1px 0 rgba(255,255,255,.40)!important}
-:where(.btn,.ghostBtn,.whiteBtn,.miniPhone,.miniWa,.wa,button):active{transform:translateY(3px);box-shadow:0 2px 0 rgba(5,31,67,.20),0 7px 13px rgba(18,104,211,.14)!important}
-:where(.panel,.flagCard,.serviceCard,.step,.post,.countryAssist,.premiumCountryGrid>a,.visaActionPanel,.checkCard,.profileGrid article,.featureGrid article){transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;box-shadow:0 7px 0 rgba(8,43,88,.025),0 18px 40px rgba(8,43,88,.09)}
-:where(.panel,.flagCard,.serviceCard,.step,.post,.countryAssist,.premiumCountryGrid>a,.visaActionPanel,.checkCard,.profileGrid article,.featureGrid article):hover{transform:translateY(-4px);box-shadow:0 9px 0 rgba(8,43,88,.025),0 26px 50px rgba(8,43,88,.14)}
-:where(.hero h1,.countryHero h1,.visaHero h1,.title h2,.guideBlock h2){text-rendering:optimizeLegibility;text-shadow:0 1px 0 #fff,0 8px 20px rgba(8,43,88,.09)}
-:focus-visible{outline:3px solid rgba(18,104,211,.28);outline-offset:3px}
+:where(.btn,.ghostBtn,.whiteBtn,.miniPhone,.miniWa,.wa,button){transition:transform .18s ease,box-shadow .18s ease,filter .18s ease;-webkit-tap-highlight-color:transparent;box-shadow:0 5px 0 rgba(0,31,31,.20),0 13px 25px rgba(42,78,28,.18),inset 0 1px 0 rgba(255,255,255,.34)!important;text-shadow:0 1px 0 rgba(0,0,0,.10)}
+:where(.btn,.ghostBtn,.whiteBtn,.miniPhone,.miniWa,.wa,button):hover{transform:translateY(-2px);filter:saturate(1.06) brightness(1.02);box-shadow:0 7px 0 rgba(0,31,31,.17),0 17px 31px rgba(42,78,28,.22),inset 0 1px 0 rgba(255,255,255,.40)!important}
+:where(.btn,.ghostBtn,.whiteBtn,.miniPhone,.miniWa,.wa,button):active{transform:translateY(3px);box-shadow:0 2px 0 rgba(0,31,31,.20),0 7px 13px rgba(42,78,28,.14)!important}
+:where(.panel,.flagCard,.serviceCard,.step,.post,.countryAssist,.premiumCountryGrid>a,.visaActionPanel,.checkCard,.profileGrid article,.featureGrid article){transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;box-shadow:0 7px 0 rgba(0,31,31,.025),0 18px 40px rgba(0,31,31,.09)}
+:where(.panel,.flagCard,.serviceCard,.step,.post,.countryAssist,.premiumCountryGrid>a,.visaActionPanel,.checkCard,.profileGrid article,.featureGrid article):hover{transform:translateY(-4px);box-shadow:0 9px 0 rgba(0,31,31,.025),0 26px 50px rgba(0,31,31,.14)}
+:where(.hero h1,.countryHero h1,.visaHero h1,.title h2,.guideBlock h2){text-rendering:optimizeLegibility;text-shadow:0 1px 0 #fff,0 8px 20px rgba(0,31,31,.09)}
+:focus-visible{outline:3px solid rgba(42,78,28,.28);outline-offset:3px}
 @media(max-width:700px){:where(.panel,.flagCard,.serviceCard,.step,.post,.countryAssist,.premiumCountryGrid>a,.visaActionPanel,.checkCard):hover{transform:none}}
 @media(prefers-reduced-motion:reduce){*:where(.btn,.ghostBtn,.whiteBtn,.miniPhone,.miniWa,.wa,button,.panel,.flagCard,.serviceCard,.step,.post){transition:none!important;transform:none!important}}
