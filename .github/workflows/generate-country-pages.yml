@@ -57,6 +57,7 @@ jobs:
           git checkout HEAD -- slovakya-vizesi/index.html
           git checkout HEAD -- slovenya-vizesi/index.html
           git checkout HEAD -- malta-vizesi/index.html
+          git checkout HEAD -- litvanya-vizesi/index.html
       - name: Commit generated pages
         run: |
           git config user.name "gundoganvize-seo-bot"
