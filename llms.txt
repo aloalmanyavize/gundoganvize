@@ -6,12 +6,23 @@
 - https://gundoganvize.com/
 
 ## Öne çıkan doğrulanmış rehberler
+- Çekya kısa süreli Schengen vizesi — Türkiye'den VFS başvurusu, Ankara/İstanbul yetki bölgeleri, 2026 uyumlaştırılmış evrak listesi, finans ve sigorta: https://gundoganvize.com/cekya-vizesi/
 - Polonya kısa süreli Schengen vizesi — Türkiye'den VFS başvurusu, 2026 randevu kategorileri, e-Konsulat formu, evrak ve PLN bazlı mali yeterlilik: https://gundoganvize.com/polonya-vizesi/
 - Litvanya kısa süreli Schengen vizesi — Türkiye'den VFS başvurusu, çevrimiçi C tipi form, evrak, finans, sigorta ve randevu: https://gundoganvize.com/litvanya-vizesi/
 - Letonya kısa süreli Schengen vizesi — Türkiye'den VFS başvurusu, 14 EUR/gün mali yeterlilik referansı, OCMA daveti ve seyahat sağlık sigortası: https://gundoganvize.com/letonya-vizesi/
 - Estonya kısa süreli Schengen vizesi: https://gundoganvize.com/estonya-vizesi/
 - Estonya D tipi uzun süreli vize: https://gundoganvize.com/blog/estonya-d-tipi-vize-basvuru-rehberi/
 - Genel gerekli evraklar: https://gundoganvize.com/gerekli-evraklar/
+
+## Çekya için doğrulanan temel noktalar
+- Türkiye'deki kısa süreli Çekya Schengen vizesi başvuruları VFS Global vize merkezleri üzerinden sunulur; başvuru merkezi ikamet iline göre Ankara/Antalya veya İstanbul/İzmir yetki alanına bağlıdır.
+- Ankara Büyükelçiliğinin 16 Şubat 2026 güncellemeli resmî bilgisinde, Schengen başvurularının vize merkezlerinde yapıldığı; yalnızca AB vatandaşı aile üyeleri, diplomatik/hizmet pasaportu sahipleri, resmî delegasyon üyeleri ve acil insani nedenlerle seyahat edenlerin doğrudan konsolosluk başvurusu yapabildiği belirtilmektedir.
+- İstanbul Başkonsolosluğunun yetki alanı Aydın, Balıkesir, Bilecik, Bursa, Çanakkale, Denizli, Edirne, İstanbul, İzmir, Kırklareli, Kocaeli, Kütahya, Manisa, Muğla, Sakarya, Tekirdağ, Uşak ve Yalova'dır; diğer iller Ankara Büyükelçiliğinin konsolosluk yetki alanındadır.
+- Türkiye'deki Schengen başvurularında 1 Şubat 2026'da güncellenen uyumlaştırılmış destekleyici belge listesi esas alınır; seyahat amacına ve başvuru sahibinin durumuna özgü kontrol listesi randevu öncesinde yeniden doğrulanmalıdır.
+- Çekya'nın kısa süreli kalış mali yeterlilik referansında 30 güne kadar kalışlar için kişi başına günlük 1.565 CZK öngörülür; banka hesabı ve uluslararası ödeme kartı veya üçüncü kişi sponsorluğu gibi kanıtlar kullanılabilir.
+- Schengen seyahat sağlık sigortası tüm Schengen alanında ve tüm kalış süresince geçerli olmalı; tıbbi geri gönderme, acil bakım, hastane ve ölümle ilgili giderleri kapsayan en az 30.000 EUR teminat sağlamalıdır.
+- Schengen başvuru formu ücretsizdir; elektronik doldurulup yazdırılabilir veya okunaklı biçimde elle doldurulabilir ve her başvuru sahibi için ayrı form gerekir.
+- Bu bilgiler Çekya Dışişleri Bakanlığı ile Çekya'nın Ankara Büyükelçiliği ve İstanbul Başkonsolosluğunun resmî sayfaları esas alınarak doğrulanmıştır; başvuru öncesinde resmî kaynak yeniden kontrol edilmelidir.
 
 ## Polonya için doğrulanan temel noktalar
 - Türkiye'deki kısa süreli C tipi Schengen vize başvuruları VFS Global üzerinden randevuyla sunulur. Türk vatandaşları, kontenjan bulunması halinde Türkiye'deki herhangi bir Polonya VFS başvuru noktasından başvuru yapabilir.
