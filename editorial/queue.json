@@ -1,5 +1,29 @@
 [
   {
+    "slug": "schengen-vizesinde-pasaport-gecerlilik-kontrolu",
+    "title": "Schengen vizesi için pasaport geçerliliği nasıl kontrol edilir?",
+    "description": "Pasaport bitiş tarihi, seyahat sonrası üç ay koşulu, çok girişli vize ve dosya hazırlanırken dikkat edilecekler.",
+    "image": "/assets/editorial/pasaport.svg",
+    "sections": [
+      {
+        "heading": "Seyahat bitiş tarihinden geriye doğru hesaplayın",
+        "text": "Avrupa Komisyonunun başvuru açıklamasına göre Schengen kısa süreli vize dosyasında pasaportun, Schengen bölgesinden planlanan çıkıştan sonra en az üç ay daha geçerli olması temel koşullardandır. Seyahatin yalnız gidiş gününe değil, planlanan dönüş gününe göre de pasaport bitiş tarihini kontrol edin."
+      },
+      {
+        "heading": "Çok girişli vizede son ziyaretin tarihini unutmayın",
+        "text": "Birden fazla giriş planlanıyorsa pasaport geçerliliği son Schengen seyahatinin bitişiyle karşılaştırılmalı. Vize etiketinde yazan giriş sayısı, vize süresi ve kalış hakkı pasaport geçerliliğinden ayrı koşullardır; biri uygun diye diğerini varsaymayın."
+      },
+      {
+        "heading": "Belgelerde pasaport numarası ve isimler aynı olmalı",
+        "text": "Başvuru formunda, randevu kaydında, sigortada ve rezervasyonlarda pasaport bilgilerini karşılaştırın. Pasaport yenileme planlıyorsanız başvuru öncesinde yetkili konsolosluğun ve başvuru merkezinin güncel kontrol listesini esas alın. Bağımsız danışmanlık randevu veya vize sonucu garantisi vermez."
+      }
+    ],
+    "source": "https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en",
+    "category": "blog",
+    "approved": true,
+    "priority": -1
+  },
+  {
     "slug": "schengen-vizesi-basvuru-zamanlamasi",
     "title": "Schengen vizesi için başvuru takvimi nasıl hazırlanır?",
     "description": "Seyahat tarihinden geriye doğru başvuru planı, randevu ve belge hazırlığı adımları.",
