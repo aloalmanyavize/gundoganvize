@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "ees-sinira-gelen-yolcu-kimler-muaf",
+    "title": "AB'nin EES sınır kaydı: hangi yolcular kapsam dışında?",
+    "description": "Avrupa Komisyonunun 27 Temmuz 2026 tarihli açıklamasındaki EES kapsamı ve belirli muafiyetler.",
+    "source": "https://home-affairs.ec.europa.eu/news/entry-exit-system-fully-operational-10-april-2026-who-exempt-2026-07-27_en",
+    "source_date": "2026-07-27",
+    "image": "/assets/editorial/pasaport.svg",
+    "sections": [
+      {
+        "heading": "EES hangi seyahatleri kapsıyor?",
+        "text": "Avrupa Komisyonunun açıklamasına göre EES, kısa süreli seyahat için dış sınırlardan giriş ve çıkış yapan belirli AB dışı ülke vatandaşlarının seyahat belgesi, biyometri ve giriş-çıkış verilerini kaydeder."
+      },
+      {
+        "heading": "Herkes aynı şekilde kaydedilmiyor",
+        "text": "AB vatandaşları ile İzlanda, Lihtenştayn, Norveç ve İsviçre vatandaşları EES'ye kaydedilmez. Bazı uzun süreli vize veya oturum izni sahiplerinin durumunda da ayrı istisnalar uygulanır. Her yolcu kendi vize ve oturum statüsüne göre resmî listeyi incelemelidir."
+      },
+      {
+        "heading": "Türkiye'den seyahat edenler ne yapmalı?",
+        "text": "Geçerli pasaport, vize veya seyahat hakkı ve kalış süresini kontrol edin. EES sınır kayıt sistemidir; yeni Schengen vizesi yerine geçmez. Uygulama için AB'nin resmî açıklamasına başvurun."
+      }
+    ]
+  },
+  {
+    "slug": "ees-etias-farklari-resmi-aciklama",
+    "title": "EES ve ETIAS aynı şey değil: Avrupa Komisyonu ne açıklıyor?",
+    "description": "AB'nin 28 Nisan 2026 tarihli açıklamasından EES ile ETIAS arasındaki farklar.",
+    "source": "https://home-affairs.ec.europa.eu/news/main-differences-between-ees-and-etias-what-travellers-need-know-2026-04-28_en",
+    "source_date": "2026-04-28",
+    "image": "/assets/editorial/avrupa.svg",
+    "sections": [
+      {
+        "heading": "EES bir sınır kayıt sistemidir",
+        "text": "EES kısa süreli ziyaretlerde uygun kapsamdaki AB dışı yolcuların giriş-çıkışlarını kaydeder. Sınırda pasaport ve biyometrik kayıtların değerlendirilmesiyle ilgilidir."
+      },
+      {
+        "heading": "ETIAS farklı yolcular için planlanan seyahat iznidir",
+        "text": "ETIAS, uygulamaya geçtiğinde belirli vizeden muaf ülke vatandaşları için ön seyahat izni olacak. Kısa süreli Schengen vizesi gereken umuma mahsus Türk pasaportları için vizenin yerini almaz."
+      },
+      {
+        "heading": "Başvuru öncesi yanlış internet sitelerinden sakının",
+        "text": "ETIAS ile vize başvurusunu karıştıran veya henüz açılmamış işlemler için başvuru ücreti isteyen sayfalara dikkat edin. Güncel takvimi ve gereklilikleri yalnız AB'nin resmî sayfalarından doğrulayın."
+      }
+    ]
+  }
+]

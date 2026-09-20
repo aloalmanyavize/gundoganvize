@@ -1,0 +1,97 @@
+name: Gündoğan Vize – Reviewed Daily Editorial
+
+on:
+  pull_request:
+    paths:
+      - 'editorial/**'
+      - 'assets/editorial/**'
+      - '_tools/editorial_publish.py'
+      - '.github/workflows/daily-editorial.yml'
+      - 'blog/index.html'
+      - 'haberler/index.html'
+      - 'index.html'
+  push:
+    branches: [main]
+    paths:
+      - 'editorial/queue.json'
+      - 'editorial/news.json'
+      - '_tools/editorial_publish.py'
+      - '.github/workflows/daily-editorial.yml'
+  schedule:
+    # Approx. 09:25 Europe/Istanbul (GitHub cron uses UTC).
+    - cron: '25 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gundoganvize-editorial
+  cancel-in-progress: false
+
+jobs:
+  test:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate reviewed queue and page markers
+        run: python _tools/editorial_publish.py --check
+      - name: Bootstrap on isolated runner
+        run: |
+          python _tools/editorial_publish.py --bootstrap
+          python _tools/editorial_publish.py --publish-one
+          python - <<'PY'
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+          ET.parse('sitemap.xml')
+          blog = sorted(Path('blog').glob('*/index.html'))
+          news = sorted(Path('haberler').glob('*/index.html'))
+          assert len(news) >= 2
+          assert sum(x.name == 'index.html' and 'Gündoğan Vize yayını:' in x.read_text() for x in blog) >= 4
+          for p in ('index.html','blog/index.html','haberler/index.html'):
+              c = Path(p).read_text()
+              assert '<!-- GVN_EDITORIAL_START -->' in c
+              assert 'gvStory' in c
+          print('Editorial smoke test passed;', len(blog), 'blog pages;', len(news), 'news pages')
+          PY
+
+  publish:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify editorial queue
+        run: python _tools/editorial_publish.py --check
+      - name: Publish launch pack or one reviewed guide
+        shell: bash
+        run: |
+          if [ ! -f blog/schengen-vizesi-basvuru-zamanlamasi/index.html ]; then
+            python _tools/editorial_publish.py --bootstrap
+          else
+            python _tools/editorial_publish.py --publish-one
+          fi
+      - name: Validate XML output
+        run: python -c "import xml.etree.ElementTree as ET; ET.parse('sitemap.xml')"
+      - name: Commit only generated pages and indices
+        shell: bash
+        run: |
+          git config user.name "gundoganvize-editorial-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -- index.html blog/index.html haberler/index.html sitemap.xml
+          git add -- 'blog/*/index.html' 'haberler/*/index.html'
+          if git diff --cached --quiet; then
+            echo "Nothing new to publish (reviewed queue exhausted or unchanged)"
+          else
+            git commit -m "Editorial: publish reviewed Schengen content [skip ci]"
+            git push origin HEAD:main
+          fi
