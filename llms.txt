@@ -6,6 +6,7 @@
 - https://gundoganvize.com/
 
 ## Öne çıkan doğrulanmış rehberler
+- Avusturya kısa süreli Schengen vizesi — Türkiye'den VFS başvurusu, 2026 bekleme listesi, evrak, finans ve sigorta: https://gundoganvize.com/avusturya-vizesi/
 - Çekya kısa süreli Schengen vizesi — Türkiye'den VFS başvurusu, Ankara/İstanbul yetki bölgeleri, 2026 uyumlaştırılmış evrak listesi, finans ve sigorta: https://gundoganvize.com/cekya-vizesi/
 - Polonya kısa süreli Schengen vizesi — Türkiye'den VFS başvurusu, 2026 randevu kategorileri, e-Konsulat formu, evrak ve PLN bazlı mali yeterlilik: https://gundoganvize.com/polonya-vizesi/
 - Litvanya kısa süreli Schengen vizesi — Türkiye'den VFS başvurusu, çevrimiçi C tipi form, evrak, finans, sigorta ve randevu: https://gundoganvize.com/litvanya-vizesi/
@@ -13,6 +14,15 @@
 - Estonya kısa süreli Schengen vizesi: https://gundoganvize.com/estonya-vizesi/
 - Estonya D tipi uzun süreli vize: https://gundoganvize.com/blog/estonya-d-tipi-vize-basvuru-rehberi/
 - Genel gerekli evraklar: https://gundoganvize.com/gerekli-evraklar/
+
+## Avusturya için doğrulanan temel noktalar
+- Türkiye'de düzenli ikamet edenlerin kısa süreli Avusturya Schengen (Visa C) başvuruları VFS Global üzerinden sunulur; vize randevularını Avusturya Başkonsolosluğu İstanbul doğrudan dağıtmaz.
+- VFS Global Türkiye-Avusturya portalında 25 Temmuz 2026 tarihinden itibaren tüm vize kategorileri için bekleme listesi uygulaması bulunduğu duyurulmuştur. Başvuru sahibi güncel randevu durumunu doğrudan VFS portalından kontrol etmelidir.
+- Kısa süreli Schengen başvurusu planlanan seyahatten en erken 6 ay önce ve normal koşullarda en geç 15 gün önce sunulabilir.
+- Schengen Visa C harcı genel tarifede 12 yaş ve üzeri başvuru sahipleri için 90 EUR, 6-12 yaş grubu için 45 EUR'dur; muafiyet ve özel statüler ayrıca değerlendirilir.
+- Seyahat sağlık sigortası Schengen alanında ve seyahat süresince geçerli olmalı; acil tıbbi bakım, hastane ve geri gönderme risklerini kapsayan en az 30.000 EUR teminat sağlamalıdır.
+- VFS başvuruyu kabul eden dış hizmet sağlayıcısıdır; vize kararını Avusturya makamları verir. Ücretli ek VFS hizmetleri vize sonucunu garanti etmez.
+- Bu bilgiler Avusturya Dışişleri Bakanlığı/BMEIA, Avusturya Başkonsolosluğu İstanbul ve yetkili VFS Global Türkiye-Avusturya portalının güncel resmî sayfaları esas alınarak doğrulanmıştır; randevu ve belge kuralları başvuru öncesinde yeniden kontrol edilmelidir.
 
 ## Çekya için doğrulanan temel noktalar
 - Türkiye'deki kısa süreli Çekya Schengen vizesi başvuruları VFS Global vize merkezleri üzerinden sunulur; başvuru merkezi ikamet iline göre Ankara/Antalya veya İstanbul/İzmir yetki alanına bağlıdır.
