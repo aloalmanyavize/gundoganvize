@@ -42,5 +42,27 @@
         "text": "ETIAS ile vize başvurusunu karıştıran veya henüz açılmamış işlemler için başvuru ücreti isteyen sayfalara dikkat edin. Güncel takvimi ve gereklilikleri yalnız AB'nin resmî sayfalarından doğrulayın."
       }
     ]
+  },
+  {
+    "slug": "ab-ees-sahte-kimliklerin-tespiti-aciklamasi",
+    "title": "AB'den EES açıklaması: sınırda kimlik kontrolü nasıl işliyor?",
+    "description": "Avrupa Komisyonunun 6 Ağustos 2026 tarihli açıklamasında EES ile sınırda kimlik tespitine ilişkin paylaşılan bilgiler.",
+    "source": "https://home-affairs.ec.europa.eu/news/ees-prevents-people-fake-identities-entering-eu-2026-08-06_en",
+    "source_date": "2026-08-06",
+    "image": "/assets/editorial/pasaport.svg",
+    "sections": [
+      {
+        "heading": "Komisyon EES'nin sınır denetimindeki rolünü anlattı",
+        "text": "Avrupa Komisyonu 6 Ağustos 2026 tarihli açıklamasında, Entry/Exit System (EES) sınır kayıtlarının kimlik denetiminde kullanılmasına ilişkin bir örnek paylaştı. Komisyonun aktardığı Şubat 2026 vakasında, bir kişinin geçmişte farklı kimliklerle Schengen alanına giriş denemelerinin sistem üzerinden tespit edildiği belirtildi."
+      },
+      {
+        "heading": "EES kimlere uygulanıyor?",
+        "text": "Sistem, Schengen alanına kısa süreli seyahat eden kapsamdaki AB dışı ülke vatandaşlarının seyahat belgesi bilgilerini, biyometrik kayıtlarını ve giriş-çıkış verilerini işliyor. AB vatandaşları ile İzlanda, Lihtenştayn, Norveç ve İsviçre vatandaşları EES kaydına tabi değil. Ayrıntılı istisnalar için resmî açıklama incelenmeli."
+      },
+      {
+        "heading": "Türk vatandaşları seyahat öncesi neyi kontrol etmeli?",
+        "text": "EES sınır geçişinde kullanılan kayıt mekanizmasıdır, Schengen vizesi veya konsolosluk başvuru kanalı değildir. Başvuru sahibi geçerli pasaport, seyahat amacı, vize ve kalış süresi koşullarını ayrı ayrı kontrol etmelidir. Bu haber yeni bir vize veya randevu uygulaması başladığı anlamına gelmez."
+      }
+    ]
   }
 ]
