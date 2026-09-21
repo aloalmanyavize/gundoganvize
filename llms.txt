@@ -6,6 +6,7 @@
 - https://gundoganvize.com/
 
 ## Öne çıkan doğrulanmış rehberler
+- İsveç kısa süreli Schengen vizesi — Türkiye'den VFS başvurusu, 700 SEK/gün geçim referansı, 2026 ücretleri, sigorta ve biyometri: https://gundoganvize.com/isvec-vizesi/
 - Avusturya kısa süreli Schengen vizesi — Türkiye'den VFS başvurusu, 2026 bekleme listesi, evrak, finans ve sigorta: https://gundoganvize.com/avusturya-vizesi/
 - Çekya kısa süreli Schengen vizesi — Türkiye'den VFS başvurusu, Ankara/İstanbul yetki bölgeleri, 2026 uyumlaştırılmış evrak listesi, finans ve sigorta: https://gundoganvize.com/cekya-vizesi/
 - Polonya kısa süreli Schengen vizesi — Türkiye'den VFS başvurusu, 2026 randevu kategorileri, e-Konsulat formu, evrak ve PLN bazlı mali yeterlilik: https://gundoganvize.com/polonya-vizesi/
@@ -14,6 +15,17 @@
 - Estonya kısa süreli Schengen vizesi: https://gundoganvize.com/estonya-vizesi/
 - Estonya D tipi uzun süreli vize: https://gundoganvize.com/blog/estonya-d-tipi-vize-basvuru-rehberi/
 - Genel gerekli evraklar: https://gundoganvize.com/gerekli-evraklar/
+
+## İsveç için doğrulanan temel noktalar
+- Türkiye'deki kısa süreli İsveç Schengen vizesi başvuruları VFS Global üzerinden randevuyla sunulur. İsveç Başkonsolosluğunun güncel Türkiye bilgisinde İstanbul, Ankara, İzmir ve Antalya VFS ofisleri listelenir; kısa süreli başvuru doğrudan Başkonsolosluğa teslim edilmez.
+- Son 59 ay içinde Schengen biyometrisi bulunmayan başvuru sahiplerinin şahsen başvurması gerekir. Önceki biyometri uygunsa bazı dosyalarda temsilciyle başvuru mümkün olabilir; kategori ve güncel belge şartları ayrıca kontrol edilmelidir.
+- Başvuru normal koşullarda planlanan seyahatten en geç 15 takvim günü önce sunulmalıdır. İsveç'in Türkiye sayfası normal değerlendirme süresini 15 gün olarak belirtir; VFS merkezi ile Başkonsolosluk arasındaki taşıma süresi buna eklenebilir.
+- İsveç Göçmenlik Dairesinin güncel kısa süreli ziyaret bilgisinde mali yeterlilik referansı kişi başına günlük 700 SEK'tir. Önceden ödenmiş yemek/konaklama, çocuklar veya davet eden kişinin masrafları üstlenmesi gibi durumlarda gereken tutar farklı değerlendirilebilir.
+- 8 Haziran 2026'dan itibaren Türkiye'deki genel kısa süreli vize harcı yetişkinler için 90 EUR, 6-12 yaş için 45 EUR, 0-5 yaş için harçtan muaftır. VFS Global ayrıca başvuru başına 14 EUR hizmet bedeli uygular.
+- Seyahat sağlık sigortası tüm Schengen ülkelerinde ve seyahatin tamamında geçerli olmalı; acil tıbbi yardım, hastane ve tıbbi geri gönderme gibi giderleri kapsayan en az 30.000 EUR teminat sağlamalıdır.
+- Türkiye'de üçüncü ülke vatandaşı olarak başvuranların Türkiye'de yasal ikamet etmesi gerekir; genel kural başvurunun kişinin vatandaşı olduğu veya yasal olarak ikamet ettiği ülkeden yapılmasıdır.
+- VFS Global yalnızca dış hizmet sağlayıcısıdır; vize kararını vermez. Ücretli aracılar, randevu satıcıları veya ek hizmetler vize sonucunu ya da işlem süresini garanti edemez.
+- Bu bilgiler İsveç'in Türkiye'deki resmî Sweden Abroad sayfaları ve İsveç Göçmenlik Dairesi esas alınarak 21 Eylül 2026 tarihinde doğrulanmıştır; randevu ve belge kuralları başvuru öncesinde yeniden kontrol edilmelidir.
 
 ## Avusturya için doğrulanan temel noktalar
 - Türkiye'de düzenli ikamet edenlerin kısa süreli Avusturya Schengen (Visa C) başvuruları VFS Global üzerinden sunulur; vize randevularını Avusturya Başkonsolosluğu İstanbul doğrudan dağıtmaz.
