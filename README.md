@@ -1,35 +1,48 @@
-# Gündoğan Vize
+# Gündoğan Vize | Visa Guides & Travel Information
 
-Türkiye'den Schengen, ulusal vize, Erasmus ve seyahat başvuruları için güncel rehberler, evrak listeleri ve başvuru süreci içerikleri.
+**Türkiye'den Avrupa'ya seyahat, eğitim ve ulusal vize başvuruları için bilgi platformu.**
 
-🌐 **Resmî web sitesi:** https://gundoganvize.com/
+[Web sitesini ziyaret et](https://gundoganvize.com/) · [GitHub profilimiz](https://github.com/aloalmanyavize) · [Vize Erasmus](https://github.com/aloalmanyavize/vizeerasmus)
 
-## Neler bulabilirsiniz?
+---
 
-- Almanya, Fransa, Hollanda, Belçika, Danimarka, Avusturya ve Çekya vize rehberleri
-- Schengen vizesi ve ulusal vize başvuru bilgileri
-- Erasmus ve öğrenci vizesi rehberleri
-- Randevu, başvuru merkezi ve evrak süreçleri
-- Güncel vize haberleri ve başvuru değişiklikleri
-- Sık sorulan sorular ve pratik başvuru notları
+## Platform hakkında
 
-## Projenin amacı
+Gündoğan Vize, başvuru sahiplerinin ülke ve vize türüne göre bilgiye ulaşmasını kolaylaştırmayı amaçlayan dijital bir rehber projesidir.
 
-Gündoğan Vize, başvuru sahiplerinin ülke ve vize türüne göre ihtiyaç duyduğu bilgilere daha hızlı ulaşmasını sağlayan, arama motoru ve yapay zekâ aramalarına uygun yapılandırılmış bir bilgi platformudur.
+| İçerik alanı | Kapsam |
+| --- | --- |
+| Schengen vizeleri | Turistik, ticari ve kısa süreli seyahat rehberleri |
+| Ulusal vizeler | Çalışma, aile birleşimi ve uzun süreli kalış konuları |
+| Eğitim ve Erasmus | Öğrenci hareketliliğiyle ilgili vize bilgileri |
+| Başvuru hazırlığı | Evrak listeleri, randevu aşamaları ve sık sorulan sorular |
+
+**Ülke rehberleri:** Almanya, Fransa, Hollanda, Belçika, Danimarka, Avusturya, Çekya ve diğer destinasyonlar.
+
+## Explore / Keşfet
+
+- **[Ana sayfa](https://gundoganvize.com/)** — Ülke ve başvuru türlerine göre içerikler.
+- **[GitHub kaynak deposu](https://github.com/aloalmanyavize/gundoganvize)** — Web projesinin erişime açık kaynak kodu.
+- **[Vize Erasmus](https://vizeerasmus.com/)** — Erasmus ve öğrenci vizelerine odaklanan ayrı platform.
+
+## İlgili dijital projeler
+
+| Proje | Web sitesi |
+| --- | --- |
+| Vize Erasmus | [vizeerasmus.com](https://vizeerasmus.com/) |
+| ALO Almanya Vize | [aloalmanyavize.com](https://aloalmanyavize.com/) |
+| Almanya Ulusal Vize | [almanyaulusalvize.com](https://almanyaulusalvize.com/) |
+| Vize Gündem Haber | [vizegundemhaber.com](https://vizegundemhaber.com/) |
+| ALO Vize Gerekli Evraklar | [alovizegereklievraklar.com](https://alovizegereklievraklar.com/) |
 
 ## English
 
-**Gündoğan Vize** provides visa guides, document checklists and application information for Schengen visas, national visas and Erasmus/student mobility from Türkiye to Europe.
+**Gündoğan Vize** is a Türkiye-based information website with country-specific visa guides, Schengen and national visa topics, student mobility resources and application preparation information.
 
-Website: https://gundoganvize.com/
+Visit **[gundoganvize.com](https://gundoganvize.com/)**.
 
-## İlgili projeler
+---
 
-- Vize Erasmus: https://vizeerasmus.com/
-- ALO Almanya Vize: https://aloalmanyavize.com/
-- Almanya Ulusal Vize: https://almanyaulusalvize.com/
-- Vize Gündem Haber: https://vizegundemhaber.com/
+> Bağımsız bilgilendirme platformudur; konsolosluk veya resmî başvuru merkezi değildir. Başvuru koşulları ve belge gereklilikleri değişebilir. Güncel şartlar için ilgili resmî makamların duyurularını kontrol edin.
 
-> Başvuru şartları konsolosluklar ve yetkili başvuru merkezleri tarafından değiştirilebilir. Güncel resmî şartlar başvuru öncesinde ayrıca kontrol edilmelidir.
-
-**Anahtar konular:** vize, Schengen, Almanya vizesi, Fransa vizesi, Erasmus vizesi, öğrenci vizesi, vize evrakları, vize randevusu, Türkiye.
+**Topics:** Schengen visa, national visa, Germany visa, France visa, Erasmus, visa checklist, travel information, Türkiye.
