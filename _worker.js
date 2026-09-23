@@ -6,8 +6,6 @@ function cleanPath(pathname) {
   path = path.replace(/\/index\.html$/i, "/");
   path = path.replace(/\/{2,}/g, "/");
   if (!path.startsWith("/")) path = `/${path}`;
-
-  // This site uses directory URLs as canonicals. Keep real files unchanged.
   const last = path.split("/").pop() || "";
   const looksLikeFile = last.includes(".");
   if (path !== "/" && !looksLikeFile && !path.endsWith("/")) path += "/";
@@ -28,7 +26,6 @@ function replaceCanonical(html, canonical) {
 
 function patchNorway2026Facts(html, path) {
   if (path !== "/norvec-vizesi/") return html;
-
   const replacements = [
     ["NOK 500 günlük finans kuralı", "konaklama durumuna göre güncel UDI finans rehberi"],
     ["NOK 500/gün finans kuralı", "UDI 300/1.300 NOK finans rehberi"],
@@ -40,7 +37,18 @@ function patchNorway2026Facts(html, path) {
     ["<summary>Norveç vizesi için banka hesabında ne kadar para olmalı?</summary><p>Resmî Türkiye sayfasında en az günlük 500 NOK maddi imkân şartı belirtilir. Bunun yanında dönüş yolculuğu ve gerçek seyahat maliyetlerinin karşılanabilirliği de önemlidir.</p>", "<summary>Norveç vizesi için banka hesabında ne kadar para olmalı?</summary><p>UDI'nin güncel rehberinde yeterlilik bireysel değerlendirilir: aile/arkadaş yanında veya önceden ödenmiş konaklamada günlük 300 NOK; konaklama önceden belgelenmemişse günlük 1.300 NOK referans alınır. Birlikte seyahat edenlerde ikinci durumda kişi başı en az 1.000 NOK rehberi belirtilir. Dönüş ve gerçek seyahat maliyetleri ayrıca karşılanabilir olmalıdır.</p>"],
     ["Norveç'in Türkiye sayfası, başvuru sahibinin Norveç ve Schengen'deki kalışı boyunca en az günlük 500 NOK maddi imkanı belgeleyebilmesini ister. Yeterli kişisel kaynak yoksa Norveç'teki ziyaretçi sponsorluk formu kullanabilir.", "UDI'nin güncel rehberinde mali yeterlilik bireysel değerlendirilir. Genel referans, aile/arkadaş yanında veya önceden ödenmiş konaklamada günlük 300 NOK; konaklama önceden belgelenmemişse günlük 1.300 NOK'tur. Yeterli kişisel kaynak yoksa Norveç'teki ziyaretçi sponsorluk formu kullanılabilir."],
   ];
+  let out = html;
+  for (const [from, to] of replacements) out = out.replace(from, to);
+  return out;
+}
 
+function patchDenmark2026Status(html, path) {
+  if (path !== "/danimarka-vizesi/") return html;
+  const replacements = [
+    ["31 Temmuz 2026 Büyükelçilik duyurusu", "18 Eylül 2026 Büyükelçilik güncellemesi"],
+    ["Danimarka’nın Türkiye’deki resmî sayfası 31 Temmuz 2026 tarihinde, Ankara Büyükelçiliğine gelen vize başvurularındaki olağanüstü yoğunluk nedeniyle işlem sürelerinin normalden çok daha uzun olduğunu duyurdu. Duyuruda o tarihte 30 Nisan 2026 tarihine kadar alınmış başvuruların işlendiği belirtiliyor.", "Danimarka’nın Türkiye’deki resmî sayfası 18 Eylül 2026 tarihinde güncellendi. Ankara Büyükelçiliğine gelen olağanüstü sayıdaki vize başvuruları nedeniyle işlem sürelerinin normalden çok daha uzun olduğu ve o tarihte 19 Haziran 2026 tarihinden itibaren yapılan başvuruların değerlendirildiği bildiriliyor."],
+    ["Normal Schengen değerlendirme süresi 15 takvim günü olsa da Danimarka Büyükelçiliği Ankara 31 Temmuz 2026 güncellemesinde olağanüstü yoğunluk nedeniyle işlem süresinin normalden çok daha uzun olduğunu bildirmiştir. Güncel durum seyahat öncesinde resmi kaynaktan kontrol edilmelidir.", "Danimarka Büyükelçiliği Ankara’nın 18 Eylül 2026 güncellemesine göre olağanüstü başvuru yoğunluğu nedeniyle işlem süresi normalden çok daha uzundur; Büyükelçilik o tarihte 19 Haziran 2026 tarihinden itibaren yapılan başvuruları değerlendirdiğini bildirmiştir. Kişisel seyahat planları nedeniyle dosyaların hızlandırılması mümkün değildir; güncel durum seyahat öncesinde resmî kaynaktan kontrol edilmelidir."],
+  ];
   let out = html;
   for (const [from, to] of replacements) out = out.replace(from, to);
   return out;
@@ -51,35 +59,20 @@ export default {
     const url = new URL(request.url);
     const isCustomDomain = url.hostname === SITE_HOST || url.hostname === `www.${SITE_HOST}`;
     const path = cleanPath(url.pathname);
-
-    if (
-      isCustomDomain &&
-      (url.protocol !== "https:" || url.hostname !== SITE_HOST || path !== url.pathname)
-    ) {
+    if (isCustomDomain && (url.protocol !== "https:" || url.hostname !== SITE_HOST || path !== url.pathname)) {
       const target = new URL(`${SITE_ORIGIN}${path}`);
       target.search = url.search;
-      return new Response(null, {
-        status: 301,
-        headers: {
-          Location: target.toString(),
-          "Cache-Control": "public, max-age=3600, s-maxage=3600",
-          "X-GundoganVize-Canonical-Redirect": "2026-09-17",
-        },
-      });
+      return new Response(null, { status: 301, headers: { Location: target.toString(), "Cache-Control": "public, max-age=3600, s-maxage=3600", "X-GundoganVize-Canonical-Redirect": "2026-09-17" } });
     }
-
     const response = await env.ASSETS.fetch(request);
     const headers = new Headers(response.headers);
     if (url.hostname.endsWith(".pages.dev")) headers.set("X-Robots-Tag", "noindex, nofollow");
-
     const type = headers.get("content-type") || "";
-    if (!type.includes("text/html")) {
-      return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
-    }
-
+    if (!type.includes("text/html")) return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
     const canonical = canonicalUrl(url);
     let body = replaceCanonical(await response.text(), canonical);
     body = patchNorway2026Facts(body, path);
+    body = patchDenmark2026Status(body, path);
     headers.delete("content-length");
     headers.set("Link", `<${canonical}>; rel="canonical"`);
     return new Response(body, { status: response.status, statusText: response.statusText, headers });
