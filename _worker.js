@@ -54,6 +54,12 @@ function patchDenmark2026Status(html, path) {
   return out;
 }
 
+function addItalyArticleSchema(html, path) {
+  if (path !== "/italya-vizesi/" || html.includes('"@id":"https://gundoganvize.com/italya-vizesi/#article"')) return html;
+  const schema = {"@context":"https://schema.org","@type":"Article","@id":"https://gundoganvize.com/italya-vizesi/#article","headline":"İtalya Vizesi: iDATA Randevu, Evraklar ve Finans Rehberi","description":"Türkiye’den İtalya Schengen vizesi için iDATA randevu süreci, konsolosluk yetki bölgesi, evraklar, mali yeterlilik, sigorta ve başvuru rehberi.","mainEntityOfPage":{"@type":"WebPage","@id":"https://gundoganvize.com/italya-vizesi/"},"author":{"@type":"Organization","name":"Gündoğan Vize","url":"https://gundoganvize.com/hakkimizda/"},"publisher":{"@type":"Organization","name":"Gündoğan Vize","url":"https://gundoganvize.com/"},"dateModified":"2026-09-24","inLanguage":"tr-TR","isAccessibleForFree":true};
+  return html.replace(/<\/head>/i, `<script type="application/ld+json">${JSON.stringify(schema)}</script></head>`);
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -73,6 +79,7 @@ export default {
     let body = replaceCanonical(await response.text(), canonical);
     body = patchNorway2026Facts(body, path);
     body = patchDenmark2026Status(body, path);
+    body = addItalyArticleSchema(body, path);
     headers.delete("content-length");
     headers.set("Link", `<${canonical}>; rel="canonical"`);
     return new Response(body, { status: response.status, statusText: response.statusText, headers });
