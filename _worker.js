@@ -60,6 +60,44 @@ function addItalyArticleSchema(html, path) {
   return html.replace(/<\/head>/i, `<script type="application/ld+json">${JSON.stringify(schema)}</script></head>`);
 }
 
+
+const SOCIAL_IMAGE = "https://gundoganvize.com/assets/social-share.png";
+const BUSINESS_SCHEMA = {"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://gundoganvize.com/#organization","name":"Gündoğan Vize","url":"https://gundoganvize.com/","description":"Ankara merkezli bağımsız Schengen vize danışmanlığı, randevu süreç desteği ve kişiye özel evrak kontrolü.","telephone":"+90 312 911 24 23","address":{"@type":"PostalAddress","streetAddress":"Kavaklıdere Mahallesi, Tunalı Hilmi Caddesi No:50/15","addressLocality":"Çankaya","addressRegion":"Ankara","addressCountry":"TR"},"areaServed":{"@type":"Country","name":"Türkiye"}};
+function ensureSocialSEO(html, canonical, path) {
+  const title = (html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [,"Gündoğan Vize"])[1].replace(/<[^>]*>/g,"").trim();
+  const desc = (html.match(/<meta\s+[^>]*name=["']description["'][^>]*content=["']([^"']*)["'][^>]*>/i) || [,"Gündoğan Vize bağımsız vize danışmanlığı."])[1];
+  const esc = s => s.replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;");
+  const additions = [];
+  const meta = (kind,name,value) => {
+    const re = new RegExp("<meta\\s+[^>]*"+kind+"=[\\\"']"+name+"[\\\"'][^>]*>","i");
+    if (!re.test(html)) additions.push('<meta '+kind+'="'+name+'" content="'+esc(value)+'">');
+  };
+  meta("property","og:type","website");
+  meta("property","og:locale","tr_TR");
+  meta("property","og:site_name","Gündoğan Vize");
+  meta("property","og:title",title);
+  meta("property","og:description",desc);
+  meta("property","og:url",canonical);
+  meta("property","og:image",SOCIAL_IMAGE);
+  meta("property","og:image:secure_url",SOCIAL_IMAGE);
+  meta("property","og:image:type","image/png");
+  meta("property","og:image:width","1200");
+  meta("property","og:image:height","630");
+  meta("property","og:image:alt","Gündoğan Vize – Schengen vize danışmanlığı");
+  html = html.replace(/<meta\s+name=["']twitter:card["']\s+content=["']summary["']\s*\/?>/i,'<meta name="twitter:card" content="summary_large_image">');
+  meta("name","twitter:card","summary_large_image");
+  meta("name","twitter:title",title);
+  meta("name","twitter:description",desc);
+  meta("name","twitter:image",SOCIAL_IMAGE);
+  if (!/<link\s+[^>]*rel=["']icon["']/i.test(html)) additions.push('<link rel="icon" href="/app-icon.svg" type="image/svg+xml"><link rel="icon" href="/apple-touch-icon.png" sizes="180x180" type="image/png">');
+  if (!/<link\s+[^>]*rel=["']apple-touch-icon["']/i.test(html)) additions.push('<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">');
+  if (!/<link\s+[^>]*rel=["']manifest["']/i.test(html)) additions.push('<link rel="manifest" href="/site.webmanifest">');
+  if (path === "/" && !html.includes('"@id":"https://gundoganvize.com/#organization"')) additions.push('<script type="application/ld+json">'+JSON.stringify(BUSINESS_SCHEMA)+'</script>');
+  html = html.replace(/<\/head>/i, additions.join("")+"</head>");
+  return html.replace(/<img\b([^>]*src=["']https:\/\/flagcdn\.com\/w80\/[^"']+["'][^>]*)>/gi,(full,attrs)=>
+    "<img"+attrs+(/\bwidth=/i.test(attrs)?"":' width="44"')+(/\bheight=/i.test(attrs)?"":' height="30"')+(/\bloading=/i.test(attrs)?"":' loading="lazy"')+(/\bdecoding=/i.test(attrs)?"":' decoding="async"')+">");
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -80,6 +118,7 @@ export default {
     body = patchNorway2026Facts(body, path);
     body = patchDenmark2026Status(body, path);
     body = addItalyArticleSchema(body, path);
+    body = ensureSocialSEO(body, canonical, path);
     headers.delete("content-length");
     headers.set("Link", `<${canonical}>; rel="canonical"`);
     return new Response(body, { status: response.status, statusText: response.statusText, headers });
