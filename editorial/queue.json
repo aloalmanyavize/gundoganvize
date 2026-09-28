@@ -298,5 +298,37 @@
     "category": "blog",
     "approved": true,
     "priority": 10
+  },
+  {
+    "slug": "schengen-vizesi-cascade-kurali-1-3-5-yil",
+    "title": "Schengen vizesinde 1-3-5 yıl kuralı: Türk vatandaşları için cascade sistemi",
+    "description": "Türk vatandaşlarına yönelik Schengen cascade kuralında 1, 3 ve 5 yıllık çok girişli vize aşamalarını, seyahat geçmişi şartını ve pasaport geçerliliğinin etkisini resmî AB kaynaklarıyla açıklayan güncel rehber.",
+    "image": "/assets/editorial/avrupa.svg",
+    "sections": [
+      {
+        "heading": "Cascade kuralı kimler için geçerli?",
+        "text": "Avrupa Birliği’nin 15 Temmuz 2025’te kabul ettiği Türkiye’ye özel daha elverişli cascade rejimi; Türkiye’de ikamet eden, kısa süreli Schengen vizesine Türkiye’den başvuran ve güvenilir seyahat geçmişi bulunan Türk vatandaşlarını kapsar. Tır şoförleri bu özel rejimin dışında tutulmuştur. Kural, uzun süreli çok girişli vize verilmesini kolaylaştırır; ancak her başvurunun otomatik olarak uzun süreli vizeyle sonuçlanacağı anlamına gelmez."
+      },
+      {
+        "heading": "1 yıllık çok girişli vizeye geçiş nasıl oluyor?",
+        "text": "Avrupa Komisyonunun açıklamasına göre önceki üç yıl içinde iki Schengen vizesi alıp bunları kurallara uygun kullanan başvuru sahiplerine bir yıl geçerli çok girişli vize düzenlenebilir. İlk vize normalde planlanan seyahati kapsar; ikinci vize ise altı aylık dönem içinde 90 güne kadar kalışa izin veren çok girişli bir vize olabilir. Önceki vizelerin usulüne uygun kullanılması yeni başvuruda önemli bir unsurdur."
+      },
+      {
+        "heading": "3 ve 5 yıllık vize hangi aşamada gündeme gelir?",
+        "text": "Bir yıllık çok girişli vizenin yasal biçimde kullanılmasının ardından üç yıllık, daha sonra da beş yıllık çok girişli vize gündeme gelebilir. Pasaportun kalan geçerlilik süresi vizenin fiilen verilebilecek süresini sınırlar. Bu nedenle uzun süreli vize beklentisi olan başvuru sahiplerinin pasaport bitiş tarihini başvurudan önce kontrol etmesi önemlidir."
+      },
+      {
+        "heading": "Uzun süreli vize 90/180 kuralını kaldırır mı?",
+        "text": "Hayır. Bir, üç veya beş yıl geçerli çok girişli Schengen vizesi, Schengen alanında kesintisiz yıllarca kalma hakkı vermez. Kısa süreli ziyaretlerde 180 günlük hareketli dönem içinde en fazla 90 gün kalış sınırı devam eder. Vize etiketindeki geçerlilik süresi, giriş sayısı ve izin verilen kalış günleri ayrı ayrı kontrol edilmelidir."
+      },
+      {
+        "heading": "Başvuruda nelere dikkat edilmeli?",
+        "text": "Önceki Schengen vizelerinin ve giriş-çıkış geçmişinin kurallara uygun olması, gerçek seyahat amacı, yeterli finansman ve ülkeye göre istenen destekleyici belgeler birlikte değerlendirilir. Cascade rejimini bir vize garantisi olarak sunan yetkisiz aracılara karşı dikkatli olun. Başvuruyu, seyahatin ana destinasyonuna göre yetkili konsolosluk veya onun resmî dış hizmet sağlayıcısı üzerinden yürütün."
+      }
+    ],
+    "source": "https://home-affairs.ec.europa.eu/news/new-rules-turkish-citizens-applying-schengen-visas-2025-07-29_en",
+    "category": "blog",
+    "approved": true,
+    "priority": 11
   }
 ]
