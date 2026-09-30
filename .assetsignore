@@ -1,0 +1,9 @@
+.git/
+.github/
+.agents/
+_tools/
+AGENTS.md
+README.md
+_worker.js
+wrangler.toml
+.assetsignore
