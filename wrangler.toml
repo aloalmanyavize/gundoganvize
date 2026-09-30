@@ -1,0 +1,10 @@
+name = "restless-frost-19de"
+main = "_worker.js"
+compatibility_date = "2026-09-30"
+
+[assets]
+directory = "."
+binding = "ASSETS"
+run_worker_first = true
+html_handling = "auto-trailing-slash"
+not_found_handling = "none"
