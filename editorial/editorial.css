@@ -8,6 +8,10 @@
 .gvStory{overflow:hidden;display:flex;flex-direction:column;background:#fff;border:1px solid #d9e6f2;border-radius:24px;box-shadow:0 16px 38px rgba(6,32,48,.10);transition:transform .25s,border-color .25s,box-shadow .25s}
 .gvStory:hover{transform:translateY(-5px);border-color:#9ebcae;box-shadow:0 24px 52px rgba(6,32,48,.16)}
 .gvStory img{width:100%;aspect-ratio:2/1;object-fit:cover;background:#082b36;filter:saturate(.94) contrast(1.03);border-bottom:1px solid rgba(201,160,79,.24)}
+/* Topic-specific real photography for the newest high-intent guides. Keep the semantic img/alt in markup while replacing only its visual source. */
+.gvStory[href*="schengen-vizesi-konaklama-belgesi-otel-rezervasyonu-davetiye"] img{content:url("https://images.unsplash.com/photo-1776763018972-588e27bf6511?auto=format&fit=crop&w=1200&q=82")}
+.gvStory[href*="schengen-vizesi-banka-hesabinda-ne-kadar-para-olmali"] img{content:url("https://images.unsplash.com/photo-1719381565370-86f9d7a9fc34?auto=format&fit=crop&w=1200&q=82")}
+.gvStory[href*="schengen-vizesi-sponsorlu-basvuru-evraklari"] img{content:url("https://images.unsplash.com/photo-1655722724447-2d2a3071e7f8?auto=format&fit=crop&w=1200&q=82")}
 .gvStory>div{padding:22px;display:flex;flex-direction:column;flex:1;gap:9px}
 .gvStoryType{font-weight:850;font-size:10px;letter-spacing:.13em;color:#a87322}
 .gvStory h3{margin:0;font-size:20px;line-height:1.27;color:#0d335b;letter-spacing:-.02em}
