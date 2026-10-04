@@ -8,20 +8,26 @@
 .gvStory{overflow:hidden;display:flex;flex-direction:column;background:#fff;border:1px solid #d9e6f2;border-radius:24px;box-shadow:0 16px 38px rgba(6,32,48,.10);transition:transform .25s,border-color .25s,box-shadow .25s}
 .gvStory:hover{transform:translateY(-5px);border-color:#9ebcae;box-shadow:0 24px 52px rgba(6,32,48,.16)}
 .gvStory img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#082b36;filter:saturate(.92) contrast(1.04);border-bottom:1px solid rgba(201,160,79,.24)}
-/* Every editorial card gets topic/keyword-matched real photography. Specific intents override generic editorial SVGs without changing semantic markup. */
-.gvStory[href*="konaklama" i] img,.gvStory[href*="otel" i] img,.gvStory[href*="davetiye" i] img{content:url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=84")}
-.gvStory[href*="banka" i] img,.gvStory[href*="sponsor" i] img,.gvStory[href*="ucret" i] img{content:url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=84")}
-.gvStory[href*="randevu" i] img,.gvStory[href*="idata" i] img,.gvStory[href*="vfs" i] img{content:url("https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=84")}
-.gvStory[href*="ret" i] img,.gvStory[href*="redd" i] img,.gvStory[href*="itiraz" i] img,.gvStory[href*="evrak" i] img,.gvStory[href*="dosya" i] img{content:url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=84")}
-.gvStory[href*="parmak" i] img,.gvStory[href*="biyometri" i] img,.gvStory[href*="vis-" i] img{content:url("https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=84")}
-.gvStory[href*="90-180" i] img,.gvStory[href*="cascade" i] img,.gvStory[href*="1-3-5" i] img,.gvStory[href*="schengen" i] img{content:url("https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1200&q=84")}
-.gvStory[href*="sigorta" i] img{content:url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=84")}
-.gvStory[href*="ucak" i] img,.gvStory[href*="bilet" i] img,.gvStory[href*="seyahat" i] img{content:url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=84")}
-.gvStory[href*="pasaport" i] img{content:url("https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=84")}
-/* Exact high-value guides keep the closest visual intent. */
+
+/* Blog ana sayfasında her rehber için ayrı, konuya yakın fotoğraf. Aynı görsel iki kartta kullanılmaz. */
+.gvStory[href*="schengen-vizesi-cocuk-muvafakatname"] img{content:url("https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1200&q=84")}
 .gvStory[href*="schengen-vizesi-konaklama-belgesi-otel-rezervasyonu-davetiye"] img{content:url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=84")}
-.gvStory[href*="schengen-vizesi-banka-hesabinda-ne-kadar-para-olmali"] img{content:url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=84")}
-.gvStory[href*="schengen-vizesi-sponsorlu-basvuru-evraklari"] img{content:url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=84")}
+.gvStory[href*="schengen-vizesi-banka-hesabinda-ne-kadar-para-olmali"] img{content:url("https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1200&q=84")}
+.gvStory[href*="schengen-vizesi-sponsorlu-basvuru-evraklari"] img{content:url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=84")}
+.gvStory[href*="schengen-vizesi-cascade-kurali-1-3-5-yil"] img{content:url("https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=84")}
+.gvStory[href*="schengen-vize-ucreti-ne-kadar-2026"] img{content:url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=84")}
+.gvStory[href*="schengen-90-180-gun-kurali-nasil-hesaplanir"] img{content:url("https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=84")}
+.gvStory[href*="vfs-idata-basvuru-merkezi-kontrolu"] img{content:url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=84")}
+.gvStory[href*="schengen-vizesi-ret-sonrasi-dosya"] img{content:url("https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=1200&q=84")}
+.gvStory[href*="schengen-vizesinde-parmak-izi-biyometri-vis"] img{content:url("https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=84")}
+.gvStory[href*="cok-girisli-schengen-vizesi-nedir"] img{content:url("https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=84")}
+.gvStory[href*="vize-randevusu-oncesi-son-kontrol"] img{content:url("https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=84")}
+.gvStory[href*="schengen-vize-sigortasi-kontrolu"] img{content:url("https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1200&q=84")}
+.gvStory[href*="schengen-vizesinde-pasaport-gecerlilik-kontrolu"] img{content:url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=84")}
+.gvStory[href*="schengen-vizesi-basvuru-zamanlamasi"] img{content:url("https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1200&q=84")}
+.gvStory[href*="schengen-vizesi-ana-destinasyon-kurali"] img{content:url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=84")}
+.gvStory[href*="schengen-dosya-tutarliligi-kontrol-listesi"] img{content:url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=84")}
+
 .gvStory>div{padding:22px;display:flex;flex-direction:column;flex:1;gap:9px}
 .gvStoryType{font-weight:850;font-size:10px;letter-spacing:.13em;color:#a87322}
 .gvStory h3{margin:0;font-size:20px;line-height:1.27;color:#0d335b;letter-spacing:-.02em}
