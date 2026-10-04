@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "schengen-vizesi-cocuk-muvafakatname",
+    "title": "Çocuklar için Schengen vizesi: muvafakatname ne zaman gerekir?",
+    "description": "18 yaş altı Schengen başvurusunda noter onaylı ebeveyn muvafakati, tek ebeveynle seyahat, yalnız seyahat ve velayet istisnalarını Türkiye için resmî AB belge listesine göre açıklayan rehber.",
+    "image": "/assets/editorial/seyahat.svg",
+    "sections": [
+      {
+        "heading": "Çocuk tek başına veya yalnız bir ebeveynle seyahat ediyorsa ne değişir?",
+        "text": "Türkiye’den yapılan kısa süreli Schengen başvuruları için Avrupa Komisyonunun uyumlaştırılmış destekleyici belge listesinde, 18 yaşından küçük başvuru sahibi tek başına ya da yalnız bir ebeveyn veya yasal vasiyle seyahat ediyorsa ebeveynlerinden noter onaylı muvafakat beyanı istenir. Bu belge, çocuğun seyahatine velayet hakkı bulunan kişinin veya kişilerin izin verdiğini dosyada açık hale getirir. Başvuru yapılacak ülkenin güncel kontrol listesi ek belge veya belirli bir belge formatı isteyebileceğinden randevu öncesinde ayrıca karşılaştırılmalıdır."
+      },
+      {
+        "heading": "Anne ve baba birlikte seyahat ediyorsa aynı belge gerekir mi?",
+        "text": "AB’nin Türkiye için yayımlanan ortak listesinde noter onaylı ebeveyn beyanı özellikle çocuğun yalnız veya yalnız bir ebeveyn ya da yasal vasiyle seyahat ettiği durum için belirtilir. Anne ve babanın çocukla birlikte aynı seyahatte olması bu senaryodan farklıdır. Yine de nüfus, velayet veya soybağı durumunu gösteren belgeler ülkeye ve başvuru kategorisine göre talep edilebilir; bu nedenle yalnız genel listeye bakarak dosyanın tamamlandığı varsayılmamalıdır."
+      },
+      {
+        "heading": "Tek ebeveyn velayet hakkına sahipse istisna nasıl işler?",
+        "text": "Resmî listede, çocukla seyahat eden ebeveyn tek ebeveyn ise veya ebeveynlik yetkisini tek başına elinde bulunduruyorsa muvafakat şartının uygulanmayabileceği belirtilir. Böyle bir durumda istisnanın dayanağını gösteren ölüm kaydı, velayet kararı veya ilgili resmî belge gibi kanıtların dosyada bulunması gerekebilir. Hangi belgenin kabul edileceği konusunda başvurulan ülkenin konsolosluk veya yetkili başvuru merkezi talimatı esas alınmalıdır."
+      },
+      {
+        "heading": "Muvafakatnameyi hazırlarken hangi bilgileri karşılaştırmalısınız?",
+        "text": "Çocuğun adı, pasaport bilgileri, seyahat tarihleri, birlikte seyahat edeceği kişi ve varsa gidilecek ülke bilgileri diğer seyahat belgeleriyle çelişmemelidir. Uçuş, konaklama, başvuru formu ve ebeveyn beyanı aynı gerçek seyahat planını desteklemelidir. Belgenin düzenlenme tarihi, noter işlemi ve gerekiyorsa tercüme şartını başvurulan ülkenin güncel kontrol listesinden doğrulayın; ülkeye göre tercüme veya ek nüfus belgeleri istenebilir."
+      },
+      {
+        "heading": "Çocuk başvurusunda yalnız muvafakatname yeterli değildir",
+        "text": "Muvafakatname yalnızca belirli seyahat senaryolarındaki ebeveyn iznini kanıtlar. Çocuğun geçerli pasaportu, başvuru formu, fotoğrafı, seyahat ve konaklama planı, sigorta, finansman ve aile durumunu destekleyen diğer belgeler ayrı gerekliliklerdir. Vize kararı konsolosluk makamına aittir; noter onaylı muvafakatname sunulması tek başına vize verilmesini garanti etmez."
+      }
+    ],
+    "source": "https://home-affairs.ec.europa.eu/system/files/2020-09/1_en_act_part1_v71_en.pdf",
+    "category": "blog",
+    "approved": true,
+    "priority": 20
+  }
+]
