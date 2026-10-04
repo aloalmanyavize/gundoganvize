@@ -1,0 +1,93 @@
+/* Header logo correction — keeps brand name and descriptor on separate stable lines */
+header .head{align-items:center}
+header .logo{
+  position:relative;
+  display:block!important;
+  flex:0 0 260px;
+  min-width:260px;
+  height:50px;
+  padding:7px 0 5px 58px!important;
+  margin:0;
+  white-space:nowrap;
+  overflow:visible;
+  font-size:0!important;
+  line-height:1!important;
+}
+/* Replace the raw text node visually with a controlled single-line brand name. */
+header .logo:before{
+  content:"GÜNDOĞAN VİZE"!important;
+  position:static!important;
+  display:block!important;
+  width:auto!important;
+  height:auto!important;
+  transform:none!important;
+  border-radius:0!important;
+  background:none!important;
+  box-shadow:none!important;
+  color:#082f36!important;
+  font-family:"Segoe UI",Inter,Arial,sans-serif;
+  font-size:21px!important;
+  line-height:22px!important;
+  font-weight:900!important;
+  letter-spacing:-.035em!important;
+}
+/* GV icon */
+header .logo:after{
+  content:"GV"!important;
+  position:absolute!important;
+  left:0!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  width:44px!important;
+  height:44px!important;
+  display:grid!important;
+  place-items:center!important;
+  border-radius:13px!important;
+  background:linear-gradient(145deg,#0a9d8f,#075b58)!important;
+  color:#fff!important;
+  font-family:"Segoe UI",Inter,Arial,sans-serif!important;
+  font-size:14px!important;
+  line-height:1!important;
+  font-weight:950!important;
+  letter-spacing:-.04em!important;
+  box-shadow:0 9px 24px rgba(6,115,106,.25),inset 0 1px 0 rgba(255,255,255,.42)!important;
+}
+header .logo small{
+  display:block!important;
+  position:static!important;
+  margin:4px 0 0!important;
+  padding:0!important;
+  color:#6a8387!important;
+  font-family:"Segoe UI",Inter,Arial,sans-serif!important;
+  font-size:8px!important;
+  line-height:10px!important;
+  font-weight:700!important;
+  letter-spacing:.13em!important;
+  white-space:nowrap!important;
+}
+
+/* Give the navigation room without allowing the logo to collapse. */
+header .head nav{min-width:0}
+header .headActions{flex:0 0 auto}
+
+@media(max-width:1180px){
+  header .logo{flex-basis:225px;min-width:225px;padding-left:52px!important}
+  header .logo:before{font-size:18px!important;line-height:20px!important}
+  header .logo:after{width:40px!important;height:40px!important;border-radius:12px!important;font-size:13px!important}
+  header .logo small{font-size:7px!important;letter-spacing:.10em!important}
+  header .head nav{gap:11px!important}
+}
+
+@media(max-width:900px){
+  header .logo{flex:0 0 215px;min-width:215px;height:46px;padding:6px 0 4px 49px!important}
+  header .logo:before{font-size:17px!important;line-height:19px!important}
+  header .logo:after{width:38px!important;height:38px!important;border-radius:11px!important;font-size:12px!important}
+  header .logo small{font-size:6.5px!important;line-height:8px!important;letter-spacing:.08em!important;margin-top:3px!important}
+}
+
+@media(max-width:700px){
+  header .logo{flex:0 0 196px;min-width:196px;height:43px;padding-left:46px!important}
+  header .logo:before{font-size:15.5px!important;line-height:18px!important}
+  header .logo:after{width:35px!important;height:35px!important;border-radius:10px!important;font-size:11px!important}
+  header .logo small{font-size:6px!important;letter-spacing:.055em!important}
+}
