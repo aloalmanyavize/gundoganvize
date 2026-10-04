@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 126" role="img" aria-labelledby="title desc">
+  <title id="title">Gündoğan Vize</title>
+  <desc id="desc">Altın uçak ve dünya küresi detaylı premium Gündoğan Vize logosu</desc>
+  <defs>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b8f82"/>
+      <stop offset="0.5" stop-color="#05665f"/>
+      <stop offset="1" stop-color="#043c3a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff2b8"/>
+      <stop offset="0.24" stop-color="#efc869"/>
+      <stop offset="0.56" stop-color="#c9912e"/>
+      <stop offset="0.78" stop-color="#f4d982"/>
+      <stop offset="1" stop-color="#a86d18"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="150%" height="170%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#082d32" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(8 7)" filter="url(#shadow)">
+    <circle cx="55" cy="56" r="45" fill="url(#teal)" stroke="url(#gold)" stroke-width="4"/>
+    <path d="M29 46c8-16 24-27 43-28-7 4-11 10-12 17 10 1 19 5 25 12-6 1-11 4-15 9 2 9 1 16-4 24-8-8-15-12-25-14-7-1-12-7-12-14 0-2 0-4 0-6Z" fill="#8bd7ca" opacity="0.88"/>
+    <path d="M18 73c15 18 39 27 61 19 13-5 23-14 29-26" fill="none" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M11 64c21-14 55-21 91-16" fill="none" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
+
+    <path d="M74 19l18 7 17-10 6 3-13 12 13 6-4 4-20-4-16 12-4-3 10-13-9-10 2-4Z" fill="url(#gold)"/>
+    <path d="M93 30C77 40 63 51 51 66" fill="none" stroke="url(#gold)" stroke-width="3" stroke-linecap="round"/>
+
+    <path d="M37 33h14c10 0 18 3 24 10l-10 8c-4-4-8-6-14-6-10 0-17 7-17 17 0 11 7 18 18 18 5 0 9-1 12-4V68H50V57h28v25c-7 7-16 10-27 10-19 0-32-12-32-30 0-17 12-29 30-29Z" fill="#f7f2df" opacity="0"/>
+    <text x="30" y="78" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700" fill="url(#gold)" letter-spacing="-3">GV</text>
+  </g>
+
+  <g transform="translate(132 20)">
+    <text x="0" y="43" font-family="Georgia, 'Times New Roman', serif" font-size="41" font-weight="700" fill="#073f3d" letter-spacing="0.8">GÜNDOĞAN</text>
+    <text x="265" y="43" font-family="Georgia, 'Times New Roman', serif" font-size="41" font-weight="700" fill="url(#gold)" letter-spacing="0.8">VİZE</text>
+    <line x1="0" y1="62" x2="442" y2="62" stroke="#d8b25c" stroke-width="1.5" opacity="0.55"/>
+    <text x="2" y="84" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#557478" letter-spacing="4.2">SCHENGEN VİZE DANIŞMANLIĞI</text>
+  </g>
+</svg>
