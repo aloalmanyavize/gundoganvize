@@ -1,0 +1,62 @@
+/* Gündoğan Vize — ülke kartlarında benzersiz ve ülkeye özgü destinasyon fotoğrafları.
+   Bu dosya premium-3d.css'ten sonra yüklenir ve eski 6 görsellik tekrar döngüsünü geçersiz kılar. */
+.premiumCountryGrid>a:before{background-repeat:no-repeat;background-size:cover;background-position:center}
+
+/* 01 Almanya — Berlin / Brandenburg */
+.premiumCountryGrid>a:nth-child(1):before{background-image:url('https://images.unsplash.com/photo-1659342126732-98ab9efd9ce0?auto=format&fit=crop&w=900&q=80')}
+/* 02 Avusturya — Viyana / Schönbrunn */
+.premiumCountryGrid>a:nth-child(2):before{background-image:url('https://images.unsplash.com/photo-1584088484864-69525c0575b5?auto=format&fit=crop&w=900&q=80')}
+/* 03 Belçika — Brüksel / Grand Place */
+.premiumCountryGrid>a:nth-child(3):before{background-image:url('https://assets.eberhardt-travel.de/2021/05/64486c5a537f7a1b42f71423.jpg?ar=1.3&crop=faces&fit=crop&w=900')}
+/* 04 Bulgaristan — Sofya / Aleksandr Nevski */
+.premiumCountryGrid>a:nth-child(4):before{background-image:url('https://images.unsplash.com/photo-1641458707290-7d26822014e3?auto=format&fit=crop&w=900&q=80')}
+/* 05 Hırvatistan — Dubrovnik */
+.premiumCountryGrid>a:nth-child(5):before{background-image:url('https://static.wixstatic.com/media/98ee6b_6df9abb99287420a8a662f5dbf449dce~mv2.jpeg/v1/fill/w_900,h_560,al_c,q_82,enc_avif,quality_auto/98ee6b_6df9abb99287420a8a662f5dbf449dce~mv2.jpeg')}
+/* 06 Çekya — Prag / Charles Bridge */
+.premiumCountryGrid>a:nth-child(6):before{background-image:url('https://assets.teenvogue.com/photos/580658be33e1b51439c8a505/16:9/w_1200,c_limit/GettyImages-459375981.jpg')}
+/* 07 Danimarka — Kopenhag / Nyhavn */
+.premiumCountryGrid>a:nth-child(7):before{background-image:url('https://internationaldriversassociation.com/cdn-cgi/image/width=1200,quality=80,format=auto/https://internationaldriversassociation.com/cms-assets/original_images/Colorful_Houses_and_Sailboats_at_Copenhagen_Harbor_dXDSgtI.jpg')}
+/* 08 Estonya — Tallinn eski şehir */
+.premiumCountryGrid>a:nth-child(8):before{background-image:url('https://uploads-ssl.webflow.com/576fd5a8f192527e50a4b95c/5dc2d15ee9c6fe87281ea4d7_tallinn%20estonia.jpg')}
+/* 09 Finlandiya — Helsinki */
+.premiumCountryGrid>a:nth-child(9):before{background-image:url('https://elamys-group2.imgix.net/elamysmatkat/iStock-2229489521.jpg?auto=format&fit=crop&w=900&q=80')}
+/* 10 Fransa — Paris / Eyfel */
+.premiumCountryGrid>a:nth-child(10):before{background-image:url('https://images.unsplash.com/photo-1431377837478-618c5b187982?auto=format&fit=crop&w=900&q=80')}
+/* 11 Yunanistan — Atina / Akropolis */
+.premiumCountryGrid>a:nth-child(11):before{background-image:url('https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=900&q=80')}
+/* 12 Macaristan — Budapeşte / Parlamento */
+.premiumCountryGrid>a:nth-child(12):before{background-image:url('https://images.unsplash.com/photo-1756326518956-e9388bd205b4?auto=format&fit=crop&w=900&q=80')}
+/* 13 İzlanda — Seljalandsfoss */
+.premiumCountryGrid>a:nth-child(13):before{background-image:url('https://cdn-adventures-live.azureedge.net/adventurescache/1/b/b/a/4/7/1bba471a708fe7e4de3934a6faa05e72f4a56c2e.jpg')}
+/* 14 İtalya — Roma / Kolezyum */
+.premiumCountryGrid>a:nth-child(14):before{background-image:url('https://montessori-ami.org/sites/default/files/images/countries/italy.jpg')}
+/* 15 Letonya — Riga */
+.premiumCountryGrid>a:nth-child(15):before{background-image:url('https://skyalo.nbg1.your-objectstorage.com/dKZdrkQ4ADUZ21MgQJv0l3bbPF4fwxjo.png')}
+/* 16 Lihtenştayn — Vaduz */
+.premiumCountryGrid>a:nth-child(16):before{background-image:url('https://www.weisses-kreuz.at/sites/default/files/styles/4_3_1920x1440/public/2025-11/170798_2014_schloss_vaduz_029-c-liechtenstein-marketing-martin-walser.jpg.webp')}
+/* 17 Litvanya — Vilnius */
+.premiumCountryGrid>a:nth-child(17):before{background-image:url('https://i.pinimg.com/originals/59/ea/af/59eaaf29330c0866ce40a2b2247fa24a.png')}
+/* 18 Lüksemburg — Lüksemburg şehir merkezi */
+.premiumCountryGrid>a:nth-child(18):before{background-image:url('https://wallpapers.com/images/hd/luxembourg-city-top-view-qcg2hrmg7bmodu9z.jpg')}
+/* 19 Malta — Valletta / Grand Harbour */
+.premiumCountryGrid>a:nth-child(19):before{background-image:url('https://kpmg.com/content/dam/kpmg/mt/images/2022/08/malta-flag-receives-high-rank-within-united-states-ports.jpg')}
+/* 20 Hollanda — Amsterdam kanalları */
+.premiumCountryGrid>a:nth-child(20):before{background-image:url('https://www.axians.com/app/uploads/sites/11/2024/12/adrien-olichon-QRtym77B6xk-unsplash-scaled.jpg')}
+/* 21 Norveç — Bergen */
+.premiumCountryGrid>a:nth-child(21):before{background-image:url('https://images.unsplash.com/photo-1671465436366-9584e93497b0?auto=format&fit=crop&w=900&q=80')}
+/* 22 Polonya — Krakow */
+.premiumCountryGrid>a:nth-child(22):before{background-image:url('https://falstaff.b-cdn.net/storage/2025/12/shutterstock_2436085449.jpg')}
+/* 23 Portekiz — Lizbon */
+.premiumCountryGrid>a:nth-child(23):before{background-image:url('https://images.unsplash.com/photo-1754151630904-da4334bddfbf?auto=format&fit=crop&w=900&q=80')}
+/* 24 Romanya — Braşov */
+.premiumCountryGrid>a:nth-child(24):before{background-image:url('https://i.pinimg.com/736x/26/b1/87/26b18714efd25dcc84801c78671f6df8.jpg')}
+/* 25 Slovakya — Bratislava */
+.premiumCountryGrid>a:nth-child(25):before{background-image:url('https://admission.euba.sk/www_write/files/gallery/bratislava/5.jpg')}
+/* 26 Slovenya — Ljubljana */
+.premiumCountryGrid>a:nth-child(26):before{background-image:url('https://images.unsplash.com/photo-1731537271897-94ca2f2eb0ed?auto=format&fit=crop&w=900&q=80')}
+/* 27 İspanya — Barselona / Sagrada Familia */
+.premiumCountryGrid>a:nth-child(27):before{background-image:url('https://inmobiliare.com/wp-content/uploads/2025/11/sagrada.jpg')}
+/* 28 İsveç — Stockholm / Gamla Stan */
+.premiumCountryGrid>a:nth-child(28):before{background-image:url('https://www.travelzoo.com/images/tzoo.98759.0.1281546.Stockholm-Stortorget-Great-Square_iStock-547518262.jpg?spr=3&width=900')}
+/* 29 İsviçre — Luzern ve Alpler */
+.premiumCountryGrid>a:nth-child(29):before{background-image:url('https://live.staticflickr.com/1957/44950818552_3e2f016243_b.jpg')}
