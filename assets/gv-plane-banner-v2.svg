@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 420" role="img" aria-label="Gündoğan Vize Danışmanlık uçak bannerı">
+<defs>
+  <linearGradient id="fuselage" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffffff"/><stop offset=".30" stop-color="#f7fbfc"/><stop offset=".62" stop-color="#cbd8de"/><stop offset=".84" stop-color="#eef4f6"/><stop offset="1" stop-color="#84969f"/>
+  </linearGradient>
+  <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fafcfd"/><stop offset=".48" stop-color="#c6d2d8"/><stop offset="1" stop-color="#71858f"/>
+  </linearGradient>
+  <linearGradient id="engine" x1="0" y1="0" x2="1" y2=".25">
+    <stop offset="0" stop-color="#f7fafb"/><stop offset=".52" stop-color="#bdcbd1"/><stop offset=".85" stop-color="#7c9099"/><stop offset="1" stop-color="#e2e9ec"/>
+  </linearGradient>
+  <linearGradient id="red" x1="0" y1="0" x2="1" y2=".2">
+    <stop offset="0" stop-color="#a80022"/><stop offset=".22" stop-color="#e11e3f"/><stop offset=".48" stop-color="#b5082d"/><stop offset=".72" stop-color="#ee2949"/><stop offset="1" stop-color="#9f001f"/>
+  </linearGradient>
+  <filter id="planeShadow" x="-20%" y="-40%" width="150%" height="190%">
+    <feDropShadow dx="0" dy="14" stdDeviation="11" flood-color="#001b22" flood-opacity=".34"/>
+  </filter>
+  <filter id="flagWave" x="-15%" y="-25%" width="135%" height="155%">
+    <feTurbulence type="fractalNoise" baseFrequency=".013 .038" numOctaves="1" seed="9" result="noise">
+      <animate attributeName="baseFrequency" dur="1.6s" values=".012 .034;.018 .049;.014 .040;.020 .052;.012 .034" repeatCount="indefinite"/>
+    </feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="noise" xChannelSelector="R" yChannelSelector="G" scale="10">
+      <animate attributeName="scale" dur="1.35s" values="7;16;10;18;8;15;7" repeatCount="indefinite"/>
+    </feDisplacementMap>
+    <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#001b22" flood-opacity=".25"/>
+  </filter>
+</defs>
+
+<!-- tow cables -->
+<path d="M533 190 C505 183 486 177 463 171" fill="none" stroke="#d7e0e4" stroke-width="3" stroke-linecap="round"/>
+<path d="M536 238 C508 245 487 252 463 261" fill="none" stroke="#c4d0d5" stroke-width="3" stroke-linecap="round"/>
+
+<!-- animated fabric banner -->
+<g filter="url(#flagWave)">
+  <path d="M22 118 C65 98 103 128 146 113 C189 97 226 128 270 113 C314 97 350 127 394 113 C433 100 470 110 510 132 L510 302 C466 281 430 315 387 296 C343 277 306 315 262 296 C218 279 181 313 138 297 C96 282 62 307 22 291 Z" fill="url(#red)"/>
+  <path d="M28 136 C97 111 130 134 191 119 C254 103 294 136 356 119 C412 104 455 119 505 138" fill="none" stroke="#ff9daf" stroke-opacity=".52" stroke-width="3"/>
+  <path d="M30 277 C92 293 129 271 188 288 C247 304 293 273 351 289 C404 304 455 285 503 297" fill="none" stroke="#740018" stroke-opacity=".34" stroke-width="4"/>
+  <circle cx="92" cy="209" r="37" fill="#fff"/>
+  <circle cx="107" cy="209" r="29" fill="#c8102e"/>
+  <path d="M137 209 l12 -5 8 -12 2 14 12 9 -14 3 -8 12 -2 -14 -12 -8z" fill="#fff"/>
+  <line x1="179" y1="161" x2="179" y2="260" stroke="#fff" stroke-opacity=".82" stroke-width="2"/>
+  <text x="211" y="201" font-family="Arial,Helvetica,sans-serif" font-size="33" font-weight="800" fill="#fff">GÜNDOĞAN VİZE</text>
+  <text x="211" y="246" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" letter-spacing="2.1" fill="#fff">DANIŞMANLIK</text>
+</g>
+
+<!-- aircraft: side profile, flying right -->
+<g filter="url(#planeShadow)" transform="translate(455 26)">
+  <!-- tailplanes and vertical stabilizer -->
+  <path d="M203 190 L92 145 L128 130 L287 179 Z" fill="url(#wing)" stroke="#627681" stroke-width="2"/>
+  <path d="M206 208 L95 247 L132 262 L291 213 Z" fill="url(#wing)" stroke="#627681" stroke-width="2"/>
+  <path d="M182 182 L153 57 C151 50 159 45 169 46 L214 49 L286 173 Z" fill="url(#fuselage)" stroke="#667a84" stroke-width="2"/>
+  <path d="M169 55 L198 53 L258 166 L220 173 Z" fill="#0a9188" opacity=".93"/>
+
+  <!-- main wing -->
+  <path d="M584 183 L370 73 L452 60 L714 171 Z" fill="url(#wing)" stroke="#5f747f" stroke-width="2.2"/>
+  <path d="M626 211 L416 349 L510 353 L792 221 Z" fill="url(#wing)" stroke="#5f747f" stroke-width="2.2"/>
+  <path d="M734 218 L597 311 L663 311 L849 223 Z" fill="#899ca5" stroke="#637882" stroke-width="2"/>
+
+  <!-- fuselage -->
+  <path d="M115 187 C207 164 397 155 619 152 L953 147 C1049 146 1134 159 1197 186 C1154 214 1078 233 966 237 L534 229 C361 227 227 216 144 202 C121 198 105 193 115 187 Z" fill="url(#fuselage)" stroke="#60737d" stroke-width="2.3"/>
+  <path d="M159 184 C366 162 702 158 978 158 C1055 158 1119 167 1166 185" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".76"/>
+  <path d="M153 205 C368 220 719 227 967 225 C1038 224 1100 216 1146 199" fill="none" stroke="#0b827b" stroke-width="9" opacity=".96"/>
+  <path d="M157 212 C366 226 713 234 959 233 C1028 232 1088 224 1130 210" fill="none" stroke="#78e0c8" stroke-width="3" opacity=".9"/>
+
+  <!-- cockpit -->
+  <path d="M1120 169 L1150 175 L1180 187 L1145 191 Z" fill="#17343e"/>
+  <path d="M1093 168 L1115 171 L1130 190 L1100 187 Z" fill="#214955"/>
+
+  <!-- windows -->
+  <g fill="#173b46">
+    <rect x="350" y="173" width="12" height="8" rx="4"/><rect x="374" y="172" width="12" height="8" rx="4"/><rect x="398" y="171" width="12" height="8" rx="4"/><rect x="422" y="170" width="12" height="8" rx="4"/><rect x="446" y="169" width="12" height="8" rx="4"/><rect x="470" y="168" width="12" height="8" rx="4"/><rect x="494" y="167" width="12" height="8" rx="4"/><rect x="518" y="166" width="12" height="8" rx="4"/><rect x="542" y="165" width="12" height="8" rx="4"/><rect x="566" y="164" width="12" height="8" rx="4"/><rect x="590" y="163" width="12" height="8" rx="4"/><rect x="614" y="163" width="12" height="8" rx="4"/><rect x="638" y="162" width="12" height="8" rx="4"/><rect x="662" y="162" width="12" height="8" rx="4"/><rect x="686" y="161" width="12" height="8" rx="4"/><rect x="710" y="161" width="12" height="8" rx="4"/><rect x="734" y="160" width="12" height="8" rx="4"/><rect x="758" y="160" width="12" height="8" rx="4"/><rect x="782" y="160" width="12" height="8" rx="4"/><rect x="806" y="159" width="12" height="8" rx="4"/><rect x="830" y="159" width="12" height="8" rx="4"/><rect x="854" y="159" width="12" height="8" rx="4"/><rect x="878" y="158" width="12" height="8" rx="4"/><rect x="902" y="158" width="12" height="8" rx="4"/>
+  </g>
+
+  <!-- side-profile engines: narrow intake rims, no frontal fan faces -->
+  <g>
+    <path d="M486 238 C499 228 519 224 545 225 L613 228 C632 229 645 239 646 251 C647 264 634 274 615 277 L546 283 C519 284 500 279 488 270 C478 262 477 247 486 238 Z" fill="url(#engine)" stroke="#5c727c" stroke-width="2.4"/>
+    <path d="M500 232 C533 229 574 229 618 234" fill="none" stroke="#fff" stroke-width="3" opacity=".72"/>
+    <path d="M642 236 C646 242 648 248 648 252 C648 258 646 266 642 271" fill="none" stroke="#32474f" stroke-width="2.4"/>
+    <path d="M487 247 C482 255 482 263 489 269" fill="none" stroke="#70858e" stroke-width="3"/>
+  </g>
+  <g transform="translate(242 -8) scale(.88)">
+    <path d="M486 238 C499 228 519 224 545 225 L613 228 C632 229 645 239 646 251 C647 264 634 274 615 277 L546 283 C519 284 500 279 488 270 C478 262 477 247 486 238 Z" fill="url(#engine)" stroke="#5c727c" stroke-width="2.4"/>
+    <path d="M500 232 C533 229 574 229 618 234" fill="none" stroke="#fff" stroke-width="3" opacity=".72"/>
+    <path d="M642 236 C646 242 648 248 648 252 C648 258 646 266 642 271" fill="none" stroke="#32474f" stroke-width="2.4"/>
+    <path d="M487 247 C482 255 482 263 489 269" fill="none" stroke="#70858e" stroke-width="3"/>
+  </g>
+
+  <circle cx="507" cy="352" r="5" fill="#2cffba"/><circle cx="507" cy="352" r="11" fill="#2cffba" opacity=".16"/>
+  <circle cx="849" cy="223" r="4" fill="#ff4b51"/><circle cx="849" cy="223" r="10" fill="#ff4b51" opacity=".16"/>
+</g>
+</svg>
