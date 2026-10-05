@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 300">
+<defs>
+  <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".48" stop-color="#eef3f5"/><stop offset="1" stop-color="#9baab1"/></linearGradient>
+  <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7fafb"/><stop offset="1" stop-color="#8798a0"/></linearGradient>
+  <radialGradient id="engine"><stop offset="0" stop-color="#0b1820"/><stop offset=".58" stop-color="#273a43"/><stop offset="1" stop-color="#9aa8ad"/></radialGradient>
+  <filter id="shadow" x="-20%" y="-30%" width="150%" height="180%"><feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#001a1e" flood-opacity=".35"/></filter>
+  <filter id="bannerShadow" x="-30%" y="-50%" width="170%" height="210%"><feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#001a1e" flood-opacity=".28"/></filter>
+</defs>
+<path d="M390 146 C350 144 330 146 310 150" fill="none" stroke="#d9e1e4" stroke-width="3" stroke-linecap="round"/>
+<g filter="url(#bannerShadow)" transform="translate(12 76)">
+  <path d="M0 18 Q18 5 38 14 Q58 24 79 13 Q99 3 121 14 Q143 26 164 14 Q185 2 208 15 Q230 27 252 14 Q276 0 304 17 L304 112 Q278 98 254 111 Q232 124 210 111 Q188 99 166 112 Q143 125 121 112 Q100 100 79 112 Q57 124 38 113 Q18 102 0 114 Z" fill="#c8102e"/>
+  <path d="M0 18 Q18 5 38 14 Q58 24 79 13 Q99 3 121 14 Q143 26 164 14 Q185 2 208 15 Q230 27 252 14 Q276 0 304 17" fill="none" stroke="#ffffff" stroke-opacity=".32" stroke-width="2"/>
+  <circle cx="49" cy="64" r="24" fill="#fff"/><circle cx="58" cy="64" r="19" fill="#c8102e"/>
+  <path d="M76 64 l8 -3 5 -7 1 9 7 6 -9 2 -5 8 -1 -9 -8 -6z" fill="#fff"/>
+  <text x="112" y="56" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#fff">GÜNDOĞAN VİZE</text>
+  <text x="112" y="82" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="600" letter-spacing="1.1" fill="#fff">DANIŞMANLIK</text>
+</g>
+<g filter="url(#shadow)" transform="translate(330 0)">
+  <path d="M178 124 L126 42 L171 39 L260 116 Z" fill="url(#wing)" stroke="#647780" stroke-width="2"/>
+  <path d="M180 132 L98 87 L135 77 L252 124 Z" fill="url(#wing)" stroke="#647780" stroke-width="2"/>
+  <path d="M110 140 C180 120 318 113 470 111 L758 107 C818 106 869 118 905 139 C867 163 816 172 754 171 L408 164 C285 161 189 154 128 146 C111 144 102 142 110 140 Z" fill="url(#body)" stroke="#60737b" stroke-width="2.2"/>
+  <path d="M455 129 L302 44 L372 38 L585 119 Z" fill="url(#wing)" stroke="#647780" stroke-width="2"/>
+  <path d="M486 149 L294 255 L374 258 L620 157 Z" fill="url(#wing)" stroke="#647780" stroke-width="2"/>
+  <path d="M586 153 L486 229 L535 227 L662 158 Z" fill="#92a2a9" stroke="#647780" stroke-width="2"/>
+  <g><path d="M386 160 C371 171 369 197 383 211 C402 229 438 226 456 208 C468 194 465 172 451 162 Z" fill="url(#wing)" stroke="#5e737c" stroke-width="2"/><ellipse cx="417" cy="189" rx="20" ry="27" fill="url(#engine)"/><ellipse cx="417" cy="189" rx="7" ry="11" fill="#0a1115"/></g>
+  <g><path d="M555 158 C542 169 541 192 553 205 C571 221 603 219 620 203 C631 191 628 171 616 161 Z" fill="url(#wing)" stroke="#5e737c" stroke-width="2"/><ellipse cx="584" cy="184" rx="18" ry="24" fill="url(#engine)"/><ellipse cx="584" cy="184" rx="6" ry="10" fill="#0a1115"/></g>
+  <path d="M278 132 C390 123 573 120 700 120" fill="none" stroke="#19343e" stroke-width="7" stroke-linecap="round" stroke-dasharray="7 13"/>
+  <path d="M132 148 C315 157 601 163 786 159" fill="none" stroke="#0c8a81" stroke-width="6"/><path d="M140 153 C322 163 595 168 775 164" fill="none" stroke="#79dfc4" stroke-width="2.2"/>
+  <path d="M821 121 L857 125 L887 140 L843 146 Z" fill="#233941"/>
+  <path d="M148 133 C335 118 619 116 764 121" fill="none" stroke="#fff" stroke-width="4" opacity=".72"/>
+  <path d="M171 113 L147 60 L187 58 L222 111 Z" fill="#0b8c84" opacity=".95"/>
+</g>
+</svg>
