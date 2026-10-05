@@ -6,50 +6,50 @@
 .hero:after{
   content:""!important;
   position:absolute!important;
-  left:-860px!important;
+  left:-300px!important;
   top:10px!important;
   width:820px!important;
   height:186px!important;
-  z-index:1!important;
-  opacity:0!important;
+  z-index:2!important;
+  opacity:.98!important;
   pointer-events:none!important;
-  background-image:url('/assets/gv-plane-banner.svg?v=1')!important;
+  background-image:url('/assets/gv-plane-banner.svg?v=2')!important;
   background-repeat:no-repeat!important;
   background-position:center!important;
   background-size:contain!important;
   filter:drop-shadow(0 16px 24px rgba(0,25,27,.26))!important;
-  animation:gvPlaneBannerPass 20s linear infinite!important;
+  animation:gvPlaneBannerPass 15s linear infinite!important;
   transform-origin:center!important;
   will-change:transform,opacity!important;
 }
 
-/* Tek yönde, doğal uçuş: geri dönerken uçak veya yazı aynalanmaz. */
+/* Uçak sayfa açılır açılmaz görünür; tek yönde doğal geçiş yapar. */
 @keyframes gvPlaneBannerPass{
-  0%{transform:translate3d(0,10px,0) rotate(-.7deg) scale(.96);opacity:0}
-  4%{opacity:.98}
-  24%{transform:translate3d(calc(38vw + 310px),-1px,0) rotate(0deg) scale(.99);opacity:.98}
-  54%{transform:translate3d(calc(74vw + 620px),-8px,0) rotate(.35deg) scale(1.01);opacity:.98}
-  91%{transform:translate3d(calc(100vw + 1180px),3px,0) rotate(.65deg) scale(1.02);opacity:.98}
-  96%{opacity:0}
-  100%{transform:translate3d(calc(100vw + 1320px),6px,0) rotate(.65deg) scale(1.02);opacity:0}
+  0%{transform:translate3d(0,8px,0) rotate(-.6deg) scale(.97);opacity:.98}
+  8%{opacity:.98}
+  32%{transform:translate3d(calc(34vw + 260px),-2px,0) rotate(0deg) scale(.99);opacity:.98}
+  65%{transform:translate3d(calc(72vw + 520px),-8px,0) rotate(.3deg) scale(1.01);opacity:.98}
+  92%{transform:translate3d(calc(100vw + 900px),2px,0) rotate(.55deg) scale(1.02);opacity:.98}
+  97%{opacity:0}
+  100%{transform:translate3d(calc(100vw + 1020px),5px,0) rotate(.55deg) scale(1.02);opacity:0}
 }
 
 @media(max-width:1050px){
-  .hero:after{width:650px!important;height:148px!important;left:-690px!important;top:14px!important;animation-duration:18s!important}
+  .hero:after{width:650px!important;height:148px!important;left:-230px!important;top:14px!important;animation-duration:14s!important}
 }
 
 @media(max-width:900px){
-  .hero:after{width:520px!important;height:118px!important;left:-550px!important;top:18px!important;opacity:0!important;animation-duration:17s!important}
+  .hero:after{width:520px!important;height:118px!important;left:-190px!important;top:18px!important;animation-duration:13s!important}
 }
 
 @media(max-width:700px){
-  .hero:after{width:410px!important;height:94px!important;left:-435px!important;top:14px!important;animation-duration:16s!important;filter:drop-shadow(0 10px 16px rgba(0,25,27,.22))!important}
+  .hero:after{width:410px!important;height:94px!important;left:-145px!important;top:14px!important;animation-duration:12s!important;filter:drop-shadow(0 10px 16px rgba(0,25,27,.22))!important}
 }
 
 @media(max-width:430px){
-  .hero:after{width:350px!important;height:80px!important;left:-370px!important;top:12px!important;animation-duration:15s!important}
+  .hero:after{width:350px!important;height:80px!important;left:-125px!important;top:12px!important;animation-duration:11s!important}
 }
 
 @media(prefers-reduced-motion:reduce){
-  .hero:after{animation:none!important;display:none!important}
+  .hero:after{animation:none!important;display:block!important;left:-80px!important;opacity:.9!important}
 }
