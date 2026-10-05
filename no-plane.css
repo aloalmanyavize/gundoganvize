@@ -1,0 +1,7 @@
+/* Homepage cleanup: remove decorative airplane/flag overlays completely. */
+.hero:after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+  animation:none!important;
+}
