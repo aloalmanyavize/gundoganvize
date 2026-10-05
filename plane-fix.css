@@ -1,46 +1,55 @@
-/* Full-width realistic airplane pass for homepage hero */
-.hero{isolation:isolate!important}
+/* Premium full-width airplane pass + Gündoğan Vize Danışmanlık tail banner */
+.hero{isolation:isolate!important;overflow:hidden!important}
 .hero>.wrap{position:relative;z-index:3!important}
 .hero .panel{position:relative;z-index:4!important}
+
 .hero:after{
   content:""!important;
   position:absolute!important;
-  left:-460px!important;
-  top:18px!important;
-  width:440px!important;
-  height:150px!important;
-  z-index:6!important;
-  opacity:.98!important;
+  left:-860px!important;
+  top:10px!important;
+  width:820px!important;
+  height:186px!important;
+  z-index:1!important;
+  opacity:0!important;
   pointer-events:none!important;
-  background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgMjYwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImIiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmZiIvPjxzdG9wIG9mZnNldD0iLjUiIHN0b3AtY29sb3I9IiNlNWVkZjAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4MTkzOWMiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0idyI+PHN0b3Agc3RvcC1jb2xvcj0iI2VlZjNmNSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzc2ODk5MiIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJlIj48c3RvcCBzdG9wLWNvbG9yPSIjMTExYTFmIi8+PHN0b3Agb2Zmc2V0PSIuNjUiIHN0b3AtY29sb3I9IiMzMzQ0NGMiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4YjlhYTEiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48ZyBzdHJva2U9IiM2MTc2ODAiIHN0cm9rZS13aWR0aD0iMiI+PHBhdGggZD0iTTQwNSAxMjYgMjU4IDUxbDU1LTkgMjAxIDc1IiBmaWxsPSJ1cmwoI3cpIi8+PHBhdGggZD0iTTE3OCAxMTcgMTM3IDMybDM4LTIgNjcgODRNMTc2IDEyMSA4MyA4MmwzMy01IDExMiAzOCIgZmlsbD0idXJsKCN3KSIvPjxwYXRoIGQ9Ik04OCAxMjdjNzQtMTggMjAyLTI2IDM0MC0yOGwyODYtNGM2My0xIDExMCAxMCAxNDAgMzItMzEgMjMtNzkgMzEtMTQ0IDMwbC0zNDAtNWMtMTI2LTItMjIyLTgtMjgyLTE5LTE4LTMtMTgtMyAwLTZaIiBmaWxsPSJ1cmwoI2IpIi8+PHBhdGggZD0ibTQ1NiAxMzctMTc2IDk1IDY5IDQgMjIwLTkxIiBmaWxsPSJ1cmwoI3cpIi8+PHBhdGggZD0ibTU0MiAxMzgtOTcgODQgNDgtMiAxMjItNzkiIGZpbGw9IiM5MWEyYWEiLz48cGF0aCBkPSJNMzgwIDE1OGMtMTMgOS0xNCAzMC0yIDQ0IDE1IDE3IDUyIDE3IDcwIDIgMTUtMTMgMTMtMzQtNC00NFoiIGZpbGw9InVybCgjdykiLz48ZWxsaXBzZSBjeD0iMzkzIiBjeT0iMTgxIiByeD0iMTciIHJ5PSIyMyIgZmlsbD0idXJsKCNlKSIvPjxwYXRoIGQ9Ik01NTEgMTU0Yy0xMiA4LTEzIDI3LTIgMzkgMTQgMTYgNDggMTYgNjUgMiAxMy0xMSAxMi0zMC00LTQwWiIgZmlsbD0idXJsKCN3KSIvPjxlbGxpcHNlIGN4PSI1NjEiIGN5PSIxNzYiIHJ4PSIxNiIgcnk9IjIxIiBmaWxsPSJ1cmwoI2UpIi8+PC9nPjxwYXRoIGQ9Ik0yOTAgMTE2YzExNS05IDI4NS0xMyA0MTAtMTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE3MzQzYyIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1kYXNoYXJyYXk9IjggMTMiLz48cGF0aCBkPSJNMTAzIDEzN2MxODAgMTIgNDcyIDE2IDY1MSA3IiBmaWxsPSJub25lIiBzdHJva2U9IiMwNzhkODQiIHN0cm9rZS13aWR0aD0iNiIvPjxwYXRoIGQ9Ik0xMTAgMTQxYzE4MiAxNCA0NjUgMTggNjMwIDkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzc4ZTRjOCIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48cGF0aCBkPSJtNzg1IDExMSAzNCA0IDI4IDEzLTQ1IDhaIiBmaWxsPSIjMjQzNzQwIi8+PHBhdGggZD0iTTEzOCAxMjBjMTg5LTE5IDQ3Ny0yNSA2MjEtMTkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI0IiBvcGFjaXR5PSIuNyIvPjwvc3ZnPg==")!important;
+  background-image:url('/assets/gv-plane-banner.svg?v=1')!important;
   background-repeat:no-repeat!important;
   background-position:center!important;
   background-size:contain!important;
-  filter:drop-shadow(0 16px 22px rgba(0,25,27,.36))!important;
-  animation:gvPlaneFullPass 22s linear infinite!important;
+  filter:drop-shadow(0 16px 24px rgba(0,25,27,.26))!important;
+  animation:gvPlaneBannerPass 20s linear infinite!important;
   transform-origin:center!important;
   will-change:transform,opacity!important;
 }
 
-@keyframes gvPlaneFullPass{
-  0%{transform:translate3d(0,14px,0) rotate(-1deg) scale(.96) scaleX(1);opacity:0}
+/* Tek yönde, doğal uçuş: geri dönerken uçak veya yazı aynalanmaz. */
+@keyframes gvPlaneBannerPass{
+  0%{transform:translate3d(0,10px,0) rotate(-.7deg) scale(.96);opacity:0}
   4%{opacity:.98}
-  22%{transform:translate3d(calc(50vw + 230px),-3px,0) rotate(0deg) scale(1) scaleX(1);opacity:.98}
-  46%{transform:translate3d(calc(100vw + 920px),-14px,0) rotate(1deg) scale(1.04) scaleX(1);opacity:.98}
-  49%{transform:translate3d(calc(100vw + 920px),-14px,0) rotate(1deg) scale(1.04) scaleX(1);opacity:0}
-  50%{transform:translate3d(calc(100vw + 920px),-10px,0) rotate(-1deg) scale(1.04) scaleX(-1);opacity:0}
-  53%{opacity:.98}
-  76%{transform:translate3d(calc(50vw + 230px),2px,0) rotate(0deg) scale(1) scaleX(-1);opacity:.98}
-  96%{transform:translate3d(0,14px,0) rotate(1deg) scale(.96) scaleX(-1);opacity:.98}
-  100%{transform:translate3d(0,14px,0) rotate(1deg) scale(.96) scaleX(-1);opacity:0}
+  24%{transform:translate3d(calc(38vw + 310px),-1px,0) rotate(0deg) scale(.99);opacity:.98}
+  54%{transform:translate3d(calc(74vw + 620px),-8px,0) rotate(.35deg) scale(1.01);opacity:.98}
+  91%{transform:translate3d(calc(100vw + 1180px),3px,0) rotate(.65deg) scale(1.02);opacity:.98}
+  96%{opacity:0}
+  100%{transform:translate3d(calc(100vw + 1320px),6px,0) rotate(.65deg) scale(1.02);opacity:0}
+}
+
+@media(max-width:1050px){
+  .hero:after{width:650px!important;height:148px!important;left:-690px!important;top:14px!important;animation-duration:18s!important}
 }
 
 @media(max-width:900px){
-  .hero:after{width:310px!important;height:108px!important;left:-330px!important;top:14px!important;animation-duration:19s!important}
+  .hero:after{width:520px!important;height:118px!important;left:-550px!important;top:18px!important;opacity:0!important;animation-duration:17s!important}
 }
+
 @media(max-width:700px){
-  .hero:after{width:235px!important;height:82px!important;left:-255px!important;top:10px!important;opacity:.9!important;animation-duration:17s!important}
+  .hero:after{width:410px!important;height:94px!important;left:-435px!important;top:14px!important;animation-duration:16s!important;filter:drop-shadow(0 10px 16px rgba(0,25,27,.22))!important}
 }
+
+@media(max-width:430px){
+  .hero:after{width:350px!important;height:80px!important;left:-370px!important;top:12px!important;animation-duration:15s!important}
+}
+
 @media(prefers-reduced-motion:reduce){
   .hero:after{animation:none!important;display:none!important}
 }
