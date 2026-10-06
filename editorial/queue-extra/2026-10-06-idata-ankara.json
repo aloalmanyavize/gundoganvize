@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "idata-ankara-almanya-vize-randevu-rehberi",
+    "title": "iDATA Ankara Almanya Vize Randevu ve Başvuru Rehberi",
+    "description": "iDATA Ankara üzerinden Almanya vizesine başvuracaklar için randevu, başvuru merkezi, görev bölgesi ve dosya hazırlığını resmî kaynaklarla açıklayan güncel rehber.",
+    "image": "/assets/editorial/ankara.svg",
+    "sections": [
+      {
+        "heading": "iDATA Ankara hangi başvurularda yetkili?",
+        "text": "iDATA'nın 6 Ekim 2026 tarihinde kontrol edilen resmî bilgilendirmesine göre kurum, Almanya Dışişleri Bakanlığı tarafından Ankara, İstanbul ve İzmir'de vize hizmetleri için yetkilendirilmiş resmî dış hizmet sağlayıcısıdır. Ankara'dan başvurmayı planlayanların önce ikamet ettikleri ilin hangi dış temsilciliğin görev bölgesinde bulunduğunu ve başvurabilecekleri ofisi resmî iDATA yönlendirmesinden doğrulaması gerekir. Başvuru merkezinin dosyayı kabul etmesi vize kararı verdiği anlamına gelmez; değerlendirme yetkili Alman dış temsilciliğindedir. Ayrıntılı Almanya süreci için /blog/idata-almanya-vize-randevu-rehberi/ ve /almanya-vizesi/ sayfalarına bakabilirsiniz."
+      },
+      {
+        "heading": "iDATA Ankara randevusu nasıl planlanmalı?",
+        "text": "iDATA'nın güncel ana sayfasındaki SSS bölümünde başvuruların sistem üzerinden alınan randevu ile kabul edildiği belirtiliyor. Randevu kaydı oluşturmadan önce seyahat amacınızı ve doğru vize kategorisini belirleyin; pasaport, iletişim ve kategori bilgilerini kayıtla dosya arasında aynı tutun. Randevu yöntemi ve yoğunluk zamanla değişebileceğinden üçüncü taraf ekran görüntüleri yerine başvuru gününde iDATA'nın resmî sayfasındaki güncel akışı esas alın. Randevu talebi konusunda bağımsız destek için /randevu-talebi/ sayfamız kullanılabilir; Gündoğan Vize'nin iDATA veya Alman dış temsilcilikleriyle kurumsal bağı yoktur."
+      },
+      {
+        "heading": "Ankara başvuru merkezine gitmeden önce ne kontrol edilmeli?",
+        "text": "iDATA'nın 6 Ekim 2026 tarihinde kontrol edilen iletişim sayfası Ankara ofisini Gaziosmanpaşa, İran Cd., Karum AVM D:21/361-362, 06680 Çankaya/Ankara adresinde listeliyor. Aynı resmî sayfada Almanya başvuruları için hafta içi 08:00-12:30 ve 13:30-17:30 başvuru saatleri gösteriliyor. Adres ve saatler operasyonel bilgi olduğundan randevu gününde resmî iDATA iletişim sayfasından yeniden doğrulayın; bu rehberdeki tarih damgası gelecekteki değişiklikleri garanti etmez."
+      },
+      {
+        "heading": "iDATA Ankara Almanya vizesi için evrak dosyası nasıl hazırlanır?",
+        "text": "Belge listesi seyahat amacına ve kişisel duruma göre değişir. Başvuru formu, pasaport, seyahat planı, konaklama, sigorta, finansal ve mesleki kanıtların birbirini desteklemesi gerekir; ancak kesin liste için Almanya'nın Türkiye'deki dış temsilcilikleri ile iDATA'nın başvuru kategorinize ait güncel kontrol listesini kullanın. Dosyanızı hazırlarken isim, pasaport numarası, seyahat tarihleri ve masrafları kimin karşılayacağı gibi alanları belgeler arasında karşılaştırın. Genel kontrol için /gerekli-evraklar/ sayfasından başlayabilirsiniz."
+      },
+      {
+        "heading": "Ankara görev bölgesinde grup başvuruları için 2026 uygulaması",
+        "text": "iDATA'nın 24 Aralık 2025 tarihli resmî duyurusuna göre Ankara Büyükelçiliği görev bölgesinde ikamet eden, en az beş kişiden oluşan ve aynı tarihlerde, aynı güzergâhta, aynı destinasyonlara ve aynı seyahat amacıyla birlikte seyahat eden gruplar için 2 Ocak 2026'dan itibaren özel bir başvuru uygulaması bulunuyor. Duyuru, bu grupların önceden iDATA ile iletişim kurmaları koşuluyla online randevu almadan başvuru yapabildiğini belirtiyor. Bu istisnayı bireysel başvurulara genellemeyin ve başvuru öncesinde resmî duyurunun hâlen geçerli olduğunu kontrol edin."
+      }
+    ],
+    "source": "https://idata.com.tr/en/contact",
+    "category": "blog",
+    "approved": true,
+    "priority": -20
+  }
+]
