@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "idata-ankara-almanya-vize-randevu",
+    "title": "iDATA Ankara Almanya Vize Randevusu: Başvuru ve Evrak Rehberi",
+    "description": "Ankara'dan Almanya Schengen vizesine başvuracaklar için iDATA randevu kaydı, doğru başvuru merkezi, biyometri ve evrak hazırlığını resmî Alman kaynaklarıyla açıklayan güncel rehber.",
+    "image": "/assets/editorial/evrak.svg",
+    "sections": [
+      {
+        "heading": "Ankara'dan Almanya Schengen vizesine nereden başvurulur?",
+        "text": "Almanya'nın Türkiye'deki dış temsilcilikleri, kısa süreli Schengen başvurularında harici hizmet sağlayıcı olarak iDATA'yı kullanıyor. Resmî Alman bilgilendirmesinde Ankara, Türkiye'deki sekiz vize kabul merkezinden biri olarak sayılıyor. Seyahatinizin ana destinasyonu Almanya ise başvuruyu ikamet yerinizden sorumlu iDATA şubesi üzerinden yürütmeniz gerekir; ana destinasyon başka bir Schengen ülkesiyse o ülkenin yetkili kanalını kullanmalısınız. Güncel merkez ulaşım ve çalışma bilgilerini başvuru gününde iDATA'nın resmî sitesinden ayrıca kontrol edin."
+      },
+      {
+        "heading": "iDATA Ankara randevu sistemi nasıl işliyor?",
+        "text": "Alman Dışişleri Bakanlığının Türkiye sayfasındaki güncel SSS'ye göre Schengen başvuru sahipleri önce iDATA randevu bekleme listesine kaydoluyor ve kayıt onayını e-posta ile alıyor. Randevular kayıtların kronolojik sırasına göre tahsis ediliyor; bu nedenle sürekli boş saat aramak yerine resmî kayıt akışını takip etmek gerekiyor. Randevu bildirimi geldiğinde isim, pasaport numarası, başvuru kategorisi ve merkez bilgisini dosyanızla karşılaştırın."
+      },
+      {
+        "heading": "Ankara randevusuna giderken hangi evraklar hazırlanmalı?",
+        "text": "Evrak listesi seyahat amacına göre değişir. Turistik başvuruda pasaport ve başvuru formuna ek olarak seyahat planı, konaklama, ulaşım, finansman ve Türkiye'deki mesleki veya sosyal bağları gösteren belgeler birlikte değerlendirilir. Almanya için kısa süreli başvuru formu VIDEX üzerinden hazırlanabilir. iDATA dosyayı ve gerektiğinde biyometriyi teslim alan hizmet sağlayıcıdır; vize kararını Alman dış temsilciliği verir. Güncel kategori kontrol listesini randevu öncesinde resmî Alman sayfası ve iDATA üzerinden yeniden karşılaştırın."
+      },
+      {
+        "heading": "Biyometri için Ankara iDATA'ya şahsen gitmek gerekir mi?",
+        "text": "Alman dış temsilciliklerinin SSS'sine göre son beş yıl içinde Schengen başvurusu sırasında parmak izi vermiş bazı başvuru sahiplerinin dosyası vekâletli temsilci aracılığıyla sunulabilir. 12 yaşından küçük çocuklar ile fiziksel olarak parmak izi alınması mümkün olmayan kişiler parmak izi zorunluluğundan muaftır. Bununla birlikte temsilcilik münferit durumda başvuru sahibini görüşmeye çağırabilir; önceki biyometri kaydının her dosyada kişisel katılımı otomatik olarak kaldırdığı varsayılmamalıdır."
+      },
+      {
+        "heading": "iDATA Ankara başvurusunda son kontrol",
+        "text": "Randevu kaydındaki başvuru kategorisinin gerçek seyahat amacınızla uyumlu olduğundan emin olun. Form, otel veya davet, ulaşım, sigorta, banka hareketleri ve mesleki belgelerdeki tarihleri karşılaştırın. Değişebilen adres, çalışma saati, hizmet bedeli ve randevu uygulaması için eski blog veya forum bilgisi yerine başvuru günü resmî iDATA ve Alman dış temsilcilik sayfalarını esas alın. Gündoğan Vize bağımsız danışmanlık hizmetidir; iDATA veya Alman dış temsilcilikleriyle kurumsal bağı yoktur ve randevu ya da vize sonucu garanti etmez."
+      }
+    ],
+    "source": "https://tuerkei.diplo.de/tr-tr/service/05-visaeinreise/2768812-2768812",
+    "category": "blog",
+    "approved": true,
+    "priority": 9
+  }
+]
