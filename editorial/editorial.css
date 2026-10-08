@@ -50,3 +50,6 @@
 @media(max-width:900px){.gvStories{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.gvEditorialHead{align-items:start;flex-direction:column}.gvStories{grid-template-columns:1fr}.gvStory>div{padding:18px}.gvArticleHero{padding:38px 0 48px}.gvArticleHero img{margin-bottom:-85px;border-radius:18px}.gvArticleBody{padding-top:108px}.gvArticleBlock p,.gvSource p{font-size:15px}.gvArticleCta{padding:22px}}
 @media(prefers-reduced-motion:reduce){.gvStory{transition:none}.gvStory:hover{transform:none}}
+
+/* Homepage: feature only the six latest articles. The full archives stay accessible via Blog / Haberler. */
+.contentHub + .gvEditorial .gvStory:nth-child(n+7){display:none}
