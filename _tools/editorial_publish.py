@@ -103,11 +103,22 @@ def write_news(items, pubdate):
 
 
 def refresh_indices(blog, news):
-    blog_cards = "\n".join(card(x, "blog") for x in sorted(blog, key=lambda x: x.get("priority", 99))[:12])
-    news_cards = "\n".join(card(x, "haberler") for x in reversed(news[-6:]))
+    # Link only to pages that have actually been published.
+    published_blog = [
+        item for item in sorted(blog, key=lambda x: x.get("priority", 99))
+        if (ROOT / "blog" / item["slug"] / "index.html").is_file()
+    ]
+    published_news = [
+        item for item in news
+        if (ROOT / "haberler" / item["slug"] / "index.html").is_file()
+    ]
+    blog_cards = "\n".join(card(x, "blog") for x in published_blog[:12])
+    news_cards = "\n".join(card(x, "haberler") for x in reversed(published_news[-6:]))
+    home_blog_cards = "\n".join(card(x, "blog") for x in published_blog[:8])
     replace_editorial("blog/index.html", blog_cards)
     replace_editorial("haberler/index.html", news_cards)
-    replace_editorial("index.html", news_cards + "\n" + blog_cards[:12000])
+    # Never truncate HTML mid-tag, which breaks the homepage layout.
+    replace_editorial("index.html", news_cards + "\n" + home_blog_cards)
 
 
 def refresh_sitemap():

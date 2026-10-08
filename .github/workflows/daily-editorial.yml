@@ -110,16 +110,78 @@ jobs:
           fi
       - name: Validate XML output
         run: python -c "import xml.etree.ElementTree as ET; ET.parse('sitemap.xml')"
-      - name: Commit only generated pages and indices
+      - name: Commit generated pages with safe retry
         shell: bash
         run: |
+          set -euo pipefail
           git config user.name "gundoganvize-editorial-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -- index.html blog/index.html haberler/index.html sitemap.xml
-          git add -- 'blog/*/index.html' 'haberler/*/index.html'
+
+          stage_generated() {
+            git add -- index.html blog/index.html haberler/index.html sitemap.xml
+            while IFS= read -r -d '' page; do
+              git add -- "$page"
+            done < <(find blog haberler -mindepth 2 -maxdepth 2 -type f -name index.html -print0)
+          }
+
+          stage_generated
           if git diff --cached --quiet; then
-            echo "Nothing new to publish (reviewed queue exhausted or unchanged)"
-          else
-            git commit -m "Editorial: publish reviewed Schengen content [skip ci]"
-            git push origin HEAD:main
+            echo "Nothing new to publish"
+            exit 0
           fi
+          git commit -m "Editorial: publish reviewed Schengen content [skip ci]"
+
+          for attempt in 1 2 3 4 5; do
+            echo "Publishing attempt $attempt / 5"
+            if push_output=$(git push origin HEAD:main 2>&1); then
+              echo "$push_output"
+              echo "Editorial content published successfully"
+              exit 0
+            fi
+            echo "$push_output"
+            if grep -Eiq 'GH006|GH013|protected branch|permission denied|write access.*not granted|HTTP 403' <<< "$push_output"; then
+              echo "::error::GitHub write permission or branch protection blocks publishing"
+              exit 1
+            fi
+            if [ "$attempt" -eq 5 ]; then
+              break
+            fi
+
+            echo "Main changed while publishing: rebuilding on the latest version"
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fd -- blog haberler
+
+            python - <<'PY'
+          import json
+          from pathlib import Path
+          q = Path('editorial/queue.json')
+          items = json.loads(q.read_text())
+          seen = {x['slug'] for x in items}
+          extra = Path('editorial/queue-extra')
+          for p in sorted(extra.glob('*.json')) if extra.exists() else []:
+              for x in json.loads(p.read_text()):
+                  if x['slug'] not in seen:
+                      items.append(x)
+                      seen.add(x['slug'])
+          q.write_text(json.dumps(items, ensure_ascii=False, indent=2) + '\n')
+          PY
+
+            python _tools/editorial_publish.py --check
+            if [ ! -f blog/schengen-vizesi-basvuru-zamanlamasi/index.html ]; then
+              python _tools/editorial_publish.py --bootstrap
+            else
+              python _tools/editorial_publish.py --publish-one
+            fi
+            python -c "import xml.etree.ElementTree as ET; ET.parse('sitemap.xml')"
+            stage_generated
+            if git diff --cached --quiet; then
+              echo "Content already published in latest main"
+              exit 0
+            fi
+            git commit -m "Editorial: publish reviewed Schengen content [skip ci]"
+            sleep "$attempt"
+          done
+
+          echo "::error::Publishing failed after 5 retries; remote main kept unchanged"
+          exit 1
