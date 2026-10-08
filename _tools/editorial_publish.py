@@ -34,10 +34,18 @@ def validate(items, news=False):
         assert len(item["title"]) >= 26 and len(item["description"]) >= 55, slug
         assert len(item["sections"]) >= 3, slug
         assert urlparse(item["source"]).hostname in OFFICIAL, slug
+        image = item.get("image", "")
+        assert image.startswith("https://images.unsplash.com/photo-") or image.startswith("/assets/editorial/"), (slug, image)
         if news:
             assert date.fromisoformat(item["source_date"]) <= date.today(), slug
         for section in item["sections"]:
             assert len(section["text"]) > 80, slug
+
+
+def editorial_image_url(item):
+    """Use each approved article's image; supports local assets and HTTPS photos."""
+    image = item["image"]
+    return image if image.startswith("https://") else BASE + image
 
 
 def article(item, pubdate, is_news):
@@ -51,7 +59,7 @@ def article(item, pubdate, is_news):
         "@context": "https://schema.org", "@type": "NewsArticle" if is_news else "BlogPosting",
         "headline": title, "description": desc, "mainEntityOfPage": url,
         "datePublished": pubdate, "dateModified": pubdate,
-        "inLanguage": "tr-TR", "image": [BASE + item["image"]],
+        "inLanguage": "tr-TR", "image": [editorial_image_url(item)],
         "author": {"@type": "Organization", "name": "Gündoğan Vize"},
         "publisher": {"@type": "Organization", "name": "Gündoğan Vize", "logo": {"@type": "ImageObject", "url": BASE + "/assets/logo.svg"}},
     }
@@ -59,8 +67,9 @@ def article(item, pubdate, is_news):
         {"@type":"ListItem","position":1,"name":"Ana Sayfa","item":BASE+"/"},
         {"@type":"ListItem","position":2,"name":"Haberler" if is_news else "Blog","item":BASE+"/"+kind+"/"},
         {"@type":"ListItem","position":3,"name":title,"item":url}]}
+    image_url = editorial_image_url(item)
     sections = "".join(f'<section><h2>{esc(s["heading"])}</h2><p>{esc(s["text"])}</p></section>' for s in item["sections"])
-    return f'''<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} | Gündoğan Vize</title><meta name="description" content="{esc(desc)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="{url}"><link rel="stylesheet" href="/styles.css"><script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script><script type="application/ld+json">{json.dumps(breadcrumb, ensure_ascii=False)}</script></head><body><header><div class="wrap head"><a class="logo" href="/">GÜNDOĞAN VİZE<small>SCHENGEN VİZE DANIŞMANLIĞI</small></a><nav><a href="/ulkeler/">Ülkeler</a><a href="/gerekli-evraklar/">Gerekli Evraklar</a><a href="/randevu-talebi/">Randevu Talebi</a><a href="/blog/">Blog</a><a href="/haberler/">Haberler</a></nav></div></header><main><section class="section"><div class="wrap visaContent"><article><span class="eyebrow">GÜNDOĞAN VİZE · {esc(pubdate)}</span><h1>{esc(title)}</h1><p class="lead">{esc(desc)}</p>{sections}<div class="notice">{esc(source_date)}Kaynak: <a href="{esc(item['source'])}" target="_blank" rel="noopener">{source_label}</a>. Resmî prosedürler değişebilir; başvuru öncesinde ilgili dış temsilcilik ve yetkili başvuru merkezinin güncel sayfasını kontrol edin.</div></article></div></section></main></body></html>'''
+    return f'''<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} | Gündoğan Vize</title><meta name="description" content="{esc(desc)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="{url}"><link rel="stylesheet" href="/styles.css"><script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script><script type="application/ld+json">{json.dumps(breadcrumb, ensure_ascii=False)}</script></head><body><header><div class="wrap head"><a class="logo" href="/">GÜNDOĞAN VİZE<small>SCHENGEN VİZE DANIŞMANLIĞI</small></a><nav><a href="/ulkeler/">Ülkeler</a><a href="/gerekli-evraklar/">Gerekli Evraklar</a><a href="/randevu-talebi/">Randevu Talebi</a><a href="/blog/">Blog</a><a href="/haberler/">Haberler</a></nav></div></header><main><section class="section"><div class="wrap visaContent"><article><span class="eyebrow">GÜNDOĞAN VİZE · {esc(pubdate)}</span><h1>{esc(title)}</h1><p class="lead">{esc(desc)}</p><figure class="gvArticlePhoto"><img src="{esc(image_url)}" width="1200" height="675" loading="eager" decoding="async" alt="{esc(title)}"><figcaption>Konuyla ilgili temsili fotoğraf</figcaption></figure>{sections}<div class="notice">{esc(source_date)}Kaynak: <a href="{esc(item['source'])}" target="_blank" rel="noopener">{source_label}</a>. Resmî prosedürler değişebilir; başvuru öncesinde ilgili dış temsilcilik ve yetkili başvuru merkezinin güncel sayfasını kontrol edin.</div></article></div></section></main></body></html>'''
 
 
 def replace_editorial(path, cards):
