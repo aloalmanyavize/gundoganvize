@@ -1,1 +1,30 @@
-[{"slug":"schengen-vizesi-banka-hesabinda-ne-kadar-para-olmali","title":"Schengen vizesi için banka hesabında ne kadar para olmalı?","description":"Schengen başvurusunda banka bakiyesi, hesap hareketleri, düzenli gelir ve seyahat bütçesini tek bir uydurma rakama bağlamadan açıklayan güncel rehber.","image":"/assets/editorial/evrak.svg","sections":[{"heading":"Tek bir 'gerekli bakiye' rakamı yok","text":"Schengen başvurusunda herkes için geçerli tek bir banka bakiyesi rakamı varsaymak doğru değildir. Avrupa Komisyonunun başvuru rehberi, seyahat boyunca yeterli finansal imkânın kanıtlanmasını ister; değerlendirme seyahat süresi, ulaşım ve konaklama planı, gelir düzeni ve başvurulan ülkenin güncel kontrol listesiyle birlikte yapılır. Bu nedenle internette dolaşan sabit euro tutarlarını bütün ülkeler için geçerli resmî kural gibi kullanmayın."},{"heading":"Hesap hareketleri neden önemli?","text":"Başvuruda yalnız tek bir günün hesap bakiyesine odaklanmak yerine finansmanın nasıl sağlandığını açıklayan tutarlı bir dosya hazırlayın. Banka hareketleri ile maaş, ticari gelir, emekli aylığı veya diğer meşru gelir belgeleri birbirini desteklemeli. Kaynağı açıklanamayan son dakika para girişleri dosyanın finansman hikâyesini açıklamak yerine yeni soru doğurabilir."},{"heading":"Seyahat bütçesini dosyanızla eşleştirin","text":"Uçuş, konaklama, şehirler arası ulaşım ve günlük harcamaları gerçek planınıza göre hesaplayın. Banka dökümü, iş veya gelir belgeleri, rezervasyonlar ve başvuru formundaki seyahat tarihleri birbirini desteklemeli. Masrafların bir bölümünü başka biri karşılıyorsa sponsorluğu ve ilgili destekleyici belgeleri başvurduğunuz ülkenin resmî kontrol listesine göre açıklayın."},{"heading":"Başvurmadan önce ülke listesini kontrol edin","text":"Schengen kuralları ortak bir çerçeve sunsa da destekleyici belge ayrıntıları ve yeterli geçim kaynağının değerlendirilmesi başvurulan ülkeye ve dosyanın koşullarına göre değişebilir. Randevudan önce ilgili büyükelçilik veya konsolosluk ile onun yetkilendirdiği başvuru merkezinin güncel belge listesini kontrol edin. Yüksek bakiye tek başına vize garantisi değildir; kararı yalnız yetkili konsolosluk verir."}],"source":"https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en","category":"blog","approved":true,"priority":20}]
+[
+  {
+    "slug": "schengen-vizesi-banka-hesabinda-ne-kadar-para-olmali",
+    "title": "Schengen vizesi için banka hesabında ne kadar para olmalı?",
+    "description": "Schengen başvurusunda banka bakiyesi, hesap hareketleri, düzenli gelir ve seyahat bütçesini tek bir uydurma rakama bağlamadan açıklayan güncel rehber.",
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=82",
+    "sections": [
+      {
+        "heading": "Tek bir 'gerekli bakiye' rakamı yok",
+        "text": "Schengen başvurusunda herkes için geçerli tek bir banka bakiyesi rakamı varsaymak doğru değildir. Avrupa Komisyonunun başvuru rehberi, seyahat boyunca yeterli finansal imkânın kanıtlanmasını ister; değerlendirme seyahat süresi, ulaşım ve konaklama planı, gelir düzeni ve başvurulan ülkenin güncel kontrol listesiyle birlikte yapılır. Bu nedenle internette dolaşan sabit euro tutarlarını bütün ülkeler için geçerli resmî kural gibi kullanmayın."
+      },
+      {
+        "heading": "Hesap hareketleri neden önemli?",
+        "text": "Başvuruda yalnız tek bir günün hesap bakiyesine odaklanmak yerine finansmanın nasıl sağlandığını açıklayan tutarlı bir dosya hazırlayın. Banka hareketleri ile maaş, ticari gelir, emekli aylığı veya diğer meşru gelir belgeleri birbirini desteklemeli. Kaynağı açıklanamayan son dakika para girişleri dosyanın finansman hikâyesini açıklamak yerine yeni soru doğurabilir."
+      },
+      {
+        "heading": "Seyahat bütçesini dosyanızla eşleştirin",
+        "text": "Uçuş, konaklama, şehirler arası ulaşım ve günlük harcamaları gerçek planınıza göre hesaplayın. Banka dökümü, iş veya gelir belgeleri, rezervasyonlar ve başvuru formundaki seyahat tarihleri birbirini desteklemeli. Masrafların bir bölümünü başka biri karşılıyorsa sponsorluğu ve ilgili destekleyici belgeleri başvurduğunuz ülkenin resmî kontrol listesine göre açıklayın."
+      },
+      {
+        "heading": "Başvurmadan önce ülke listesini kontrol edin",
+        "text": "Schengen kuralları ortak bir çerçeve sunsa da destekleyici belge ayrıntıları ve yeterli geçim kaynağının değerlendirilmesi başvurulan ülkeye ve dosyanın koşullarına göre değişebilir. Randevudan önce ilgili büyükelçilik veya konsolosluk ile onun yetkilendirdiği başvuru merkezinin güncel belge listesini kontrol edin. Yüksek bakiye tek başına vize garantisi değildir; kararı yalnız yetkili konsolosluk verir."
+      }
+    ],
+    "source": "https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en",
+    "category": "blog",
+    "approved": true,
+    "priority": 20
+  }
+]
