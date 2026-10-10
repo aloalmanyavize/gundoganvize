@@ -72,6 +72,8 @@ jobs:
               assert 'gvStory' in c
           print('Editorial smoke test passed;', len(blog), 'blog pages;', len(news), 'news pages')
           PY
+      - name: Verify priority URLs remain in sitemap
+        run: python _tools/check_sitemap.py
 
   publish:
     if: github.event_name != 'pull_request'
@@ -108,8 +110,8 @@ jobs:
           else
             python _tools/editorial_publish.py --publish-one
           fi
-      - name: Validate XML output
-        run: python -c "import xml.etree.ElementTree as ET; ET.parse('sitemap.xml')"
+      - name: Validate sitemap and priority landing pages
+        run: python _tools/check_sitemap.py
       - name: Commit generated pages with safe retry
         shell: bash
         run: |
@@ -173,7 +175,7 @@ jobs:
             else
               python _tools/editorial_publish.py --publish-one
             fi
-            python -c "import xml.etree.ElementTree as ET; ET.parse('sitemap.xml')"
+            python _tools/check_sitemap.py
             stage_generated
             if git diff --cached --quiet; then
               echo "Content already published in latest main"

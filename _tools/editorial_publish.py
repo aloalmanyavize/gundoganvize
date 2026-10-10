@@ -54,7 +54,10 @@ def article(item, pubdate, is_news):
     desc = item["description"]
     title = item["title"]
     source_date = ("Kaynak duyurusu: " + item["source_date"] + " · ") if is_news else ""
-    source_label = "AB resmî açıklaması" if is_news else "Avrupa Komisyonu başvuru rehberi"
+    source_host = urlparse(item["source"]).hostname
+    source_label = ("AB resmî açıklaması" if is_news else
+                    "iDATA resmî bilgilendirmesi" if source_host in {"idata.com.tr", "www.idata.com.tr"}
+                    else "Avrupa Komisyonu başvuru rehberi")
     schema = {
         "@context": "https://schema.org", "@type": "NewsArticle" if is_news else "BlogPosting",
         "headline": title, "description": desc, "mainEntityOfPage": url,
