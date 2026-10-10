@@ -7,7 +7,10 @@ on:
       - 'assets/editorial/**'
       - '_tools/editorial_publish.py'
       - '.github/workflows/daily-editorial.yml'
+      - '_tools/check_sitemap.py'
       - 'blog/index.html'
+      - 'blog/*/index.html'
+      - 'fransa-vizesi/index.html'
       - 'haberler/index.html'
       - 'index.html'
   push:
@@ -74,6 +77,23 @@ jobs:
           PY
       - name: Verify priority URLs remain in sitemap
         run: python _tools/check_sitemap.py
+      - name: Verify France landing and conversion links
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          blog = Path('blog/vfs-global-fransa-vize-randevu-rehberi/index.html').read_text(encoding='utf-8')
+          country = Path('fransa-vizesi/index.html').read_text(encoding='utf-8')
+          assert '<link rel="canonical" href="https://gundoganvize.com/blog/vfs-global-fransa-vize-randevu-rehberi/">' in blog
+          assert '/randevu-talebi/' in blog and 'www.france-visas.gouv.fr/en/web/france-visas/turquie' in blog
+          assert 'Ankara, Gaziantep, İstanbul ve İzmir' in blog
+          assert '/blog/vfs-global-fransa-vize-randevu-rehberi/' in country
+          class TagChecker(HTMLParser):
+              pass
+          TagChecker().feed(blog)
+          TagChecker().feed(country)
+          print('France SEO and conversion navigation smoke test passed')
+          PY
 
   publish:
     if: github.event_name != 'pull_request'
