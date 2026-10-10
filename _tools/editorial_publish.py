@@ -122,10 +122,21 @@ def refresh_indices(blog, news):
 
 
 def refresh_sitemap():
+    """Keep all public HTML landing pages, not just editorial posts."""
     urls = [BASE + "/"]
-    for root in ("blog", "haberler"):
-        for p in sorted((ROOT / root).glob("*/index.html")):
-            urls.append(BASE + "/" + root + "/" + p.parent.name + "/")
+    for page in sorted(ROOT.rglob("index.html")):
+        relative = page.relative_to(ROOT)
+        if relative == Path("index.html"):
+            continue
+        if any(part.startswith(".") or part.startswith("_") for part in relative.parts):
+            continue
+        if relative.parts[0] in {"8d-wall-privacy", "node_modules", "dist"}:
+            continue
+        content = page.read_text(encoding="utf-8")
+        if re.search(r'<meta[^>]+name=["\\\']robots["\\\'][^>]+content=["\\\'][^"\\\']*noindex', content, re.I):
+            continue
+        path = "/".join(relative.parts[:-1])
+        urls.append(BASE + "/" + path + "/")
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(f'<url><loc>{u}</loc></url>' for u in urls) + '\n</urlset>\n'
     (ROOT / "sitemap.xml").write_text(xml, encoding="utf-8")
 
