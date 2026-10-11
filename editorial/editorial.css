@@ -98,3 +98,21 @@
 .gvTopicVisual img{display:block;width:100%;height:300px;max-height:300px;object-fit:cover;object-position:center;border-radius:19px;box-shadow:0 14px 38px rgba(5,32,58,.12)}
 .gvTopicVisual figcaption{margin:9px 3px 0;color:#637488;font-size:12px;line-height:1.5}
 @media(max-width:640px){.gvTopicVisual{padding:16px 0 6px}.gvTopicVisual img{height:195px;max-height:195px;border-radius:13px}}
+
+/* NEWS ARCHIVE RESPONSIVE GRID — source articles should read as cards, not full-width images. */
+.gvNewsArchive{background:linear-gradient(180deg,#f4f8fc 0%,#fff 100%);padding:52px 0 76px}
+.gvNewsArchive .wrap{max-width:1180px}
+.gvNewsArchiveHead{margin:0 0 28px;max-width:790px}
+.gvNewsArchiveHead h2{font-size:clamp(28px,3.1vw,40px);line-height:1.15;color:#10395f;letter-spacing:-.03em;margin:8px 0 12px}
+.gvNewsArchiveHead p{font-size:15px;line-height:1.75;color:#5b7085;margin:0}
+.gvNewsArchive .gvStories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch}
+.gvNewsArchive .gvStory{display:flex;flex-direction:column;min-width:0;margin:0;max-width:none}
+.gvNewsArchive .gvStory>img{display:block;width:100%;height:195px;max-height:195px;aspect-ratio:auto;object-fit:cover;object-position:center;flex-shrink:0}
+.gvNewsArchive .gvStory>div{padding:19px 20px 23px;gap:9px}
+.gvNewsArchive .gvStory h3{font-size:19px;line-height:1.3;margin:0}
+.gvNewsArchive .gvStory h3 a{color:#123f63;text-decoration:none}
+.gvNewsArchive .gvStory h3 a:hover{text-decoration:underline;text-underline-offset:3px}
+.gvNewsArchive .gvStory p{font-size:13px;line-height:1.7;color:#526a80}
+.gvNewsArchive .gvStoryType{font-weight:800;letter-spacing:.11em;font-size:10px;color:#976e24}
+@media(max-width:940px){.gvNewsArchive .gvStories{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.gvNewsArchive{padding:34px 0 48px}.gvNewsArchive .gvStories{grid-template-columns:1fr;gap:16px}.gvNewsArchive .gvStory>img{height:186px;max-height:186px}.gvNewsArchive .gvStory>div{padding:17px 18px 20px}}

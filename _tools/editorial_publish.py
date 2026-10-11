@@ -99,7 +99,7 @@ def replace_editorial(path, cards):
 
 
 def card(item, kind):
-    return f'<article class="gvStory"><img src="{esc(editorial_image_url(item))}" alt="{esc(editorial_image_alt(item))}" loading="lazy"<div><span>{"HABER" if kind=="haberler" else "REHBER"}</span><h3><a href="/{kind}/{esc(item["slug"])}/">{esc(item["title"])}</a></h3><p>{esc(item["description"])}</p></div></article>'
+    return f'<article class="gvStory"><img src="{esc(editorial_image_url(item))}" alt="{esc(editorial_image_alt(item))}" loading="lazy" decoding="async" width="640" height="360"><div><span>{"HABER" if kind=="haberler" else "REHBER"}</span><h3><a href="/{kind}/{esc(item["slug"])}/">{esc(item["title"])}</a></h3><p>{esc(item["description"])}</p></div></article>'
 
 
 def publish_one(items, pubdate):
