@@ -117,6 +117,15 @@ def main() -> int:
         ('styles repair import', "/site-repair.css" in (ROOT / "styles.css").read_text()),
         ('premium CSS loaded', "/premium-unified.css" in (ROOT / "styles.css").read_text()),
     ]
+    faq_pages = ["index.html", "randevu-talebi/index.html", "ulkeler/index.html", "blog/index.html"]
+    for faq_path in faq_pages:
+        page_html = (ROOT / faq_path).read_text(encoding="utf-8")
+        if 'id="sss"' not in page_html or page_html.count('class="gvFaqItem"') < 5:
+            errors.append(f"{faq_path}: missing visible FAQ section or too few answers")
+        if '/faq-premium.css' not in page_html or not (ROOT / "faq-premium.css").is_file():
+            errors.append(f"{faq_path}: FAQ styles missing")
+        if '"@type":"FAQPage"' not in page_html:
+            errors.append(f"{faq_path}: matching FAQ structured data missing")
     for label, good in layout_checks:
         if not good:
             errors.append("critical layout: " + label)
