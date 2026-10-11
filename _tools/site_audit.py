@@ -105,6 +105,7 @@ def main() -> int:
         ('country list count', len(re.findall(r'<a href="/[a-z-]+-vizesi/"', countries)) == 29),
         ('six services', len(re.findall(r'class="serviceCard"', home)) == 6),
         ('services anchor', 'id="hizmetler"' in home),
+        ('country selector', 'id="countryFilter"' in countries and 'id="countryResults"' in countries),
         ('styles repair import', "/site-repair.css" in (ROOT / "styles.css").read_text()),
     ]
     for label, good in layout_checks:

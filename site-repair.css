@@ -47,3 +47,25 @@ body{overflow-x:hidden}
 .gvBlogArchive .gvStory,.gvNewsArchive .gvStory{min-width:0}
 .gvBlogArchive .gvStory>img,.gvNewsArchive .gvStory>img{width:100%;height:190px;max-height:190px;object-fit:cover;flex-shrink:0}
 @media(max-width:640px){.gvBlogArchive .gvStory>img,.gvNewsArchive .gvStory>img{height:185px;max-height:185px}}
+
+/* Country selector: accessible, indexable and instant; does not remove any href. */
+.gvCountryFinder{margin:12px 0 22px;padding:20px 22px;border-radius:18px;border:1px solid #cce2dd;background:linear-gradient(110deg,#f2faf8,#fff);box-shadow:0 9px 30px rgba(5,62,54,.04)}
+.gvCountryFinder label{display:block;font-weight:800;font-size:15px;color:#103f3d;margin-bottom:11px}
+.gvCountrySearchLine{display:flex;gap:14px;align-items:center}
+.gvCountrySearchLine input{flex:1;min-width:0;min-height:48px;width:100%;border-radius:11px;border:1px solid #b7d4ce;padding:13px 15px;font:inherit;font-size:15px;color:#143d44;background:#fff;outline-offset:3px}
+.gvCountrySearchLine input:focus-visible{outline:2px solid #147b70;border-color:#147b70}
+.gvCountrySearchLine span{flex:0 0 auto;font-size:12px;font-weight:700;color:#426761}
+.gvCountryNoResults{padding:16px;color:#416572;border:1px dashed #98bbb5;background:#f7fbfb;border-radius:12px}
+.gvCountryNoResults a{color:#0c7267;text-decoration:underline}
+.gvCountryNoResults[hidden],.countrySection .premiumCountryGrid>a[hidden]{display:none!important}
+@media(max-width:680px){.gvCountryFinder{padding:16px}.gvCountrySearchLine{align-items:flex-start;flex-direction:column}.gvCountrySearchLine span{font-size:11px}}
+
+/* France's most-viewed guide: direct answer before the long article. */
+.gvFrQuick{margin:22px auto 30px;max-width:1120px;padding:24px 26px;border:1px solid #d4e4e8;border-left:5px solid #137f73;border-radius:17px;background:#f4faf8;box-shadow:0 14px 35px rgba(12,52,53,.06)}
+.gvFrQuick h2{margin:0 0 12px;font-size:clamp(21px,2.8vw,28px);color:#103c48}
+.gvFrQuick p{font-size:14px;color:#425d67;line-height:1.85;margin:0 0 16px}
+.gvFrQuickActions{display:flex;gap:12px;flex-wrap:wrap}
+.gvFrQuickActions a{display:inline-flex;padding:12px 14px;border-radius:9px;font-size:12px;font-weight:850;color:#fff;background:#0b746a;text-decoration:none}
+.gvFrQuickActions a+ a{background:#fff;color:#14585b;border:1px solid #b9d0d1}
+.gvFrQuick small{display:block;color:#637982;margin-top:13px;font-size:11px}
+@media(max-width:620px){.gvFrQuick{padding:19px}.gvFrQuickActions a{width:100%;justify-content:center}}
