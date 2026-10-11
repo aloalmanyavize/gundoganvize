@@ -1,0 +1,31 @@
+/* Gündoğan Vize premium FAQ — accessible native disclosure components */
+.gvFaqColumn,.gvFaqSection{--gv-faq-navy:#102d42;--gv-faq-ink:#25465b;--gv-faq-gold:#bd9355}
+.gvFaqColumn{min-width:0}
+.gvFaqColumn>h2{font-size:clamp(27px,2.8vw,36px);color:var(--gv-faq-navy);line-height:1.18;margin:11px 0 13px;letter-spacing:-.025em}
+.gvFaqLead,.gvFaqIntro p{font-size:14px;color:#5b7180;line-height:1.75;max-width:720px;margin:0 0 22px}
+.gvFaqList{display:grid;gap:11px;min-width:0}
+.gvFaqItem{display:block;border:1px solid #dfe8eb;border-radius:15px;background:#fff;box-shadow:0 8px 24px rgba(16,45,66,.045);overflow:hidden}
+.gvFaqItem[open]{border-color:#d5bb97;box-shadow:0 14px 30px rgba(16,45,66,.07)}
+.gvFaqItem summary{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 19px;min-height:58px;cursor:pointer;list-style:none;color:#173d54;font-size:15px;font-weight:750;line-height:1.45;user-select:none}
+.gvFaqItem summary::-webkit-details-marker{display:none}
+.gvFaqItem summary::after{content:"+";flex:0 0 29px;width:29px;height:29px;border-radius:50%;display:grid;place-items:center;background:#f5ede1;color:#986f36;font-size:21px;font-weight:500;line-height:1}
+.gvFaqItem[open] summary::after{content:"−";background:#183b50;color:#fff}
+.gvFaqItem summary:hover{background:#f9faf9}
+.gvFaqItem summary:focus-visible{outline:3px solid #bc985e;outline-offset:-3px}
+.gvFaqAnswer{padding:0 19px 18px;border-top:1px solid #eef0f1}
+.gvFaqAnswer p{margin:13px 0 0;color:#4b6473;font-size:14px;line-height:1.8}
+.gvFaqMore,.gvFaqFooter a{display:inline-flex;align-items:center;min-height:40px;font-size:13px;color:#0a766e;font-weight:800;text-decoration:underline;text-underline-offset:4px}
+.gvFaqMore{margin-top:15px}
+.gvFaqSection{padding:62px 0 72px;background:linear-gradient(180deg,#f4f8f9 0%,#fff 100%)}
+.gvFaqSection>.wrap{max-width:1010px}
+.gvFaqIntro{max-width:820px;margin-bottom:26px}
+.gvFaqIntro .eyebrow{color:#a47b42}
+.gvFaqIntro h2{font-size:clamp(28px,3.7vw,41px);line-height:1.15;letter-spacing:-.035em;color:#102d42;margin:9px 0 12px}
+.gvFaqSection .gvFaqItem summary{font-size:16px;padding:21px 23px}
+.gvFaqSection .gvFaqAnswer{padding:0 23px 20px}
+.gvFaqFooter{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-top:23px}
+.gvFaqFooter p{max-width:420px;color:#627787;font-size:12px;line-height:1.6;margin:0}
+.gvFaqFooter>div{display:flex;flex-wrap:wrap;gap:15px}
+.gvFaqSection .wrap{min-width:0}
+@media(max-width:700px){.gvFaqSection{padding:42px 0 53px}.gvFaqItem summary,.gvFaqSection .gvFaqItem summary{font-size:14px;padding:16px}.gvFaqItem summary::after{flex-basis:27px;width:27px;height:27px}.gvFaqAnswer,.gvFaqSection .gvFaqAnswer{padding:0 16px 16px}.gvFaqAnswer p{font-size:13px}.gvFaqColumn>h2{font-size:27px}}
+@media(prefers-reduced-motion:reduce){.gvFaqItem,.gvFaqItem *{scroll-behavior:auto}}
