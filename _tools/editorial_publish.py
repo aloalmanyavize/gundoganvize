@@ -33,6 +33,12 @@ def validate(items, news=False):
         assert item.get("approved") is True or news, slug
         assert len(item["title"]) >= 26 and len(item["description"]) >= 55, slug
         assert len(item["sections"]) >= 3, slug
+        # Existing published articles are maintained in place; new articles must
+        # offer substantive guidance rather than three short paragraphs.
+        if not news and not (ROOT / "blog" / slug / "index.html").is_file():
+            body_words = sum(len(section["text"].split()) for section in item["sections"])
+            assert len(item["sections"]) >= 5, f"{slug}: at least five focused sections required"
+            assert body_words >= 400, f"{slug}: only {body_words} words; expand before publication"
         assert urlparse(item["source"]).hostname in OFFICIAL, slug
         image = item.get("image", "")
         assert image.startswith("https://images.unsplash.com/photo-") or image.startswith("/assets/editorial/"), (slug, image)
