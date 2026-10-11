@@ -59,7 +59,7 @@ def resolve_local(value: str, page: Path) -> Path | None:
     return candidate
 
 def main() -> int:
-    expected_nav = ["/ulkeler/","/#hizmetler","/gerekli-evraklar/","/randevu-talebi/","/blog/","/haberler/","/#iletisim"]
+    expected_nav = ["/ulkeler/","/#hizmetler","/gerekli-evraklar/","/randevu-talebi/","/blog/","/haberler/","/hakkimizda/","/#iletisim"]
     errors, warnings = [], []
     pages = sorted(
         p for p in ROOT.rglob("index.html")
@@ -110,11 +110,15 @@ def main() -> int:
     layout_checks = [
         ('blog archive grid', 'class="gvBlogArchive"' in blog and 'class="gvStories"' in blog),
         ('news archive grid', 'class="gvNewsArchive section"' in news and 'class="gvStories"' in news),
-        ('country list count', len(re.findall(r'<a href="/[a-z-]+-vizesi/"', countries)) == 29),
+        ('country list count', len(re.findall(r'<a href="/[a-z-]+-vizesi/"', countries)) == 32),
         ('six services', len(re.findall(r'class="serviceCard"', home)) == 6),
         ('services anchor', 'id="hizmetler"' in home),
         ('country selector', 'id="countryFilter"' in countries and 'id="countryResults"' in countries),
+        ('global visas', all(f'/{slug}-vizesi/' in countries for slug in ('amerika','ingiltere','avustralya'))),
+        ('13-year experience', '13 yıllık' in (ROOT / 'hakkimizda/index.html').read_text(encoding='utf-8').lower()),
         ('styles repair import', "/site-repair.css" in (ROOT / "styles.css").read_text()),
+        ('about navigation', 'href="/hakkimizda/"' in home),
+        ('about 13 years', '13 yıllık' in (ROOT / 'hakkimizda/index.html').read_text(encoding='utf-8')),
         ('premium CSS loaded', "/premium-unified.css" in (ROOT / "styles.css").read_text()),
     ]
     faq_pages = ["index.html", "randevu-talebi/index.html", "ulkeler/index.html", "blog/index.html"]
@@ -126,6 +130,11 @@ def main() -> int:
             errors.append(f"{faq_path}: FAQ styles missing")
         if '"@type":"FAQPage"' not in page_html:
             errors.append(f"{faq_path}: matching FAQ structured data missing")
+    generated_slugs = ["avusturya","belcika","bulgaristan","hirvatistan","cekya","danimarka","estonya","finlandiya","fransa","yunanistan","macaristan","izlanda","italya","letonya","lihtenstayn","litvanya","luksemburg","malta","hollanda","norvec","polonya","portekiz","romanya","slovakya","slovenya","ispanya","isvec","isvicre"]
+    for slug in generated_slugs:
+        content = (ROOT / (slug + "-vizesi/index.html")).read_text(encoding="utf-8")
+        if 'id="ulkeye-ozel"' not in content or '/country-deep.css' not in content:
+            errors.append(f"{slug}: unique country guide content or style missing")
     for label, good in layout_checks:
         if not good:
             errors.append("critical layout: " + label)
