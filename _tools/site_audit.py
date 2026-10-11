@@ -59,7 +59,7 @@ def resolve_local(value: str, page: Path) -> Path | None:
     return candidate
 
 def main() -> int:
-    expected_nav = ["/ulkeler/","/#hizmetler","/gerekli-evraklar/","/randevu-talebi/","/blog/","/haberler/","/#iletisim"]
+    expected_nav = ["/ulkeler/","/#hizmetler","/gerekli-evraklar/","/randevu-talebi/","/blog/","/haberler/","/hakkimizda/","/#iletisim"]
     errors, warnings = [], []
     pages = sorted(
         p for p in ROOT.rglob("index.html")
@@ -115,6 +115,8 @@ def main() -> int:
         ('services anchor', 'id="hizmetler"' in home),
         ('country selector', 'id="countryFilter"' in countries and 'id="countryResults"' in countries),
         ('styles repair import', "/site-repair.css" in (ROOT / "styles.css").read_text()),
+        ('about navigation', 'href="/hakkimizda/"' in home),
+        ('about 13 years', '13 yıllık' in (ROOT / 'hakkimizda/index.html').read_text(encoding='utf-8')),
         ('premium CSS loaded', "/premium-unified.css" in (ROOT / "styles.css").read_text()),
     ]
     faq_pages = ["index.html", "randevu-talebi/index.html", "ulkeler/index.html", "blog/index.html"]
