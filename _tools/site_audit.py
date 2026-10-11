@@ -110,10 +110,12 @@ def main() -> int:
     layout_checks = [
         ('blog archive grid', 'class="gvBlogArchive"' in blog and 'class="gvStories"' in blog),
         ('news archive grid', 'class="gvNewsArchive section"' in news and 'class="gvStories"' in news),
-        ('country list count', len(re.findall(r'<a href="/[a-z-]+-vizesi/"', countries)) == 29),
+        ('country list count', len(re.findall(r'<a href="/[a-z-]+-vizesi/"', countries)) == 32),
         ('six services', len(re.findall(r'class="serviceCard"', home)) == 6),
         ('services anchor', 'id="hizmetler"' in home),
         ('country selector', 'id="countryFilter"' in countries and 'id="countryResults"' in countries),
+        ('global visas', all(f'/{slug}-vizesi/' in countries for slug in ('amerika','ingiltere','avustralya'))),
+        ('13-year experience', '13 yıllık' in (ROOT / 'hakkimizda/index.html').read_text(encoding='utf-8').lower()),
         ('styles repair import', "/site-repair.css" in (ROOT / "styles.css").read_text()),
         ('about navigation', 'href="/hakkimizda/"' in home),
         ('about 13 years', '13 yıllık' in (ROOT / 'hakkimizda/index.html').read_text(encoding='utf-8')),
