@@ -79,7 +79,7 @@ def article(item, pubdate, is_news):
         "datePublished": pubdate, "dateModified": pubdate,
         "inLanguage": "tr-TR", "image": [editorial_image_url(item)],
         "author": {"@type": "Organization", "name": "Gündoğan Vize"},
-        "publisher": {"@type": "Organization", "name": "Gündoğan Vize", "logo": {"@type": "ImageObject", "url": BASE + "/assets/logo.svg"}},
+        "publisher": {"@type": "Organization", "name": "Gündoğan Vize", "logo": {"@type": "ImageObject", "url": BASE + "/assets/gundogan-vize-premium-logo.svg"}},
     }
     breadcrumb = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
         {"@type":"ListItem","position":1,"name":"Ana Sayfa","item":BASE+"/"},
