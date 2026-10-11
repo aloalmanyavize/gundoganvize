@@ -125,7 +125,7 @@ def main() -> int:
     guide_min_words = {"amerika": 850, "ingiltere": 800, "avustralya": 850}
     for slug, minimum_words in guide_min_words.items():
         guide = (ROOT / f"{slug}-vizesi/index.html").read_text(encoding="utf-8")
-        visible = re.sub(r"<[^>]+>", " ", re.sub(r"<script[\\s\\S]*?</script>", "", guide, flags=re.I))
+        visible = re.sub(r"<[^>]+>", " ", re.sub(r"<script[\s\S]*?</script>", "", guide, flags=re.I))
         if len(visible.split()) < minimum_words or guide.count("gvCountryDepth20261012") < 3:
             errors.append(f"{slug}: visitor guide missing detailed procedure sections")
         if "/hakkimizda/" not in guide or 'id="sss"' not in guide:
