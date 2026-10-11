@@ -17,6 +17,7 @@ on:
     branches: [main]
     paths:
       - 'editorial/queue.json'
+      - 'editorial/topic-images.json'
       - 'editorial/queue-extra/**'
       - 'editorial/news.json'
       - '_tools/editorial_publish.py'
