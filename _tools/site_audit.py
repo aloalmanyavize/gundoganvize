@@ -70,7 +70,7 @@ def main() -> int:
         rel = page.relative_to(ROOT).as_posix()
         if not s.lstrip().lower().startswith("<!doctype html>"):
             errors.append(f"{rel}: HTML doctype missing")
-        if re.search(r'<img\\b[^>]*<div\\b', s, re.I) or re.search(r'loading="lazy"\\s*<div', s):
+        if re.search(r'<img\b[^>]*<div\b', s, re.I) or re.search(r'loading="lazy"\s*<div', s):
             errors.append(f"{rel}: malformed image tag")
         if "https://gundoganvize.comhttps://" in s:
             errors.append(f"{rel}: malformed absolute image URL")
@@ -112,7 +112,10 @@ def main() -> int:
             errors.append("critical layout: " + label)
     for css_path in (ROOT / "styles.css",):
         css = css_path.read_text()
-        for name in re.findall(r"@import\\s+url\\(['\\\"]?(/[^)'\\\"]+)", css):
+        for match in re.finditer(r'@import\s+url\(([^)]+)\)', css):
+            name = match.group(1).strip(" \"'")
+            if not name.startswith("/"):
+                continue
             target = ROOT / name.lstrip("/").split("?")[0]
             if not target.exists():
                 errors.append(f"missing imported CSS: {name}")
