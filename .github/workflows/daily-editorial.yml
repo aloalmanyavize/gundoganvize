@@ -24,6 +24,9 @@ on:
       - 'editorial/queue-extra/**'
       - 'editorial/news.json'
       - '_tools/editorial_publish.py'
+      - '_tools/site_audit.py'
+      - 'site-repair.css'
+      - 'styles.css'
       - '.github/workflows/daily-editorial.yml'
   schedule:
     - cron: '25 6 * * *'
