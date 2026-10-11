@@ -48,10 +48,19 @@ def validate(items, news=False):
             assert len(section["text"]) > 80, slug
 
 
+def topic_images():
+    return read_json("editorial/topic-images.json")
+
+
 def editorial_image_url(item):
-    """Use each approved article's image; supports local assets and HTTPS photos."""
-    image = item["image"]
+    """Prefer the manually assigned image for each article topic."""
+    photo = topic_images().get(item["slug"])
+    image = photo["image"] if photo else item["image"]
     return image if image.startswith("https://") else BASE + image
+
+
+def editorial_image_alt(item):
+    return topic_images().get(item["slug"], {}).get("alt", item["title"])
 
 
 def article(item, pubdate, is_news):
@@ -78,7 +87,7 @@ def article(item, pubdate, is_news):
         {"@type":"ListItem","position":3,"name":title,"item":url}]}
     image_url = editorial_image_url(item)
     sections = "".join(f'<section><h2>{esc(s["heading"])}</h2><p>{esc(s["text"])}</p></section>' for s in item["sections"])
-    return f'''<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} | Gündoğan Vize</title><meta name="description" content="{esc(desc)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="{url}"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/editorial/editorial.css?v=20261008-topic-photos"><script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script><script type="application/ld+json">{json.dumps(breadcrumb, ensure_ascii=False)}</script></head><body><header><div class="wrap head"><a class="logo" href="/">GÜNDOĞAN VİZE<small>SCHENGEN VİZE DANIŞMANLIĞI</small></a><nav><a href="/ulkeler/">Ülkeler</a><a href="/gerekli-evraklar/">Gerekli Evraklar</a><a href="/randevu-talebi/">Randevu Talebi</a><a href="/blog/">Blog</a><a href="/haberler/">Haberler</a></nav></div></header><main><section class="section"><div class="wrap visaContent"><article><span class="eyebrow">GÜNDOĞAN VİZE · {esc(pubdate)}</span><h1>{esc(title)}</h1><p class="lead">{esc(desc)}</p><figure class="gvArticlePhoto"><img src="{esc(image_url)}" width="1200" height="675" loading="eager" decoding="async" alt="{esc(title)}"><figcaption>Konuyla ilgili temsili fotoğraf</figcaption></figure>{sections}<div class="notice">{esc(source_date)}Kaynak: <a href="{esc(item['source'])}" target="_blank" rel="noopener">{source_label}</a>. Resmî prosedürler değişebilir; başvuru öncesinde ilgili dış temsilcilik ve yetkili başvuru merkezinin güncel sayfasını kontrol edin.</div></article></div></section></main></body></html>'''
+    return f'''<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} | Gündoğan Vize</title><meta name="description" content="{esc(desc)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="{url}"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/editorial/editorial.css?v=20261008-topic-photos"><script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script><script type="application/ld+json">{json.dumps(breadcrumb, ensure_ascii=False)}</script></head><body><header><div class="wrap head"><a class="logo" href="/">GÜNDOĞAN VİZE<small>SCHENGEN VİZE DANIŞMANLIĞI</small></a><nav><a href="/ulkeler/">Ülkeler</a><a href="/gerekli-evraklar/">Gerekli Evraklar</a><a href="/randevu-talebi/">Randevu Talebi</a><a href="/blog/">Blog</a><a href="/haberler/">Haberler</a></nav></div></header><main><section class="section"><div class="wrap visaContent"><article><span class="eyebrow">GÜNDOĞAN VİZE · {esc(pubdate)}</span><h1>{esc(title)}</h1><p class="lead">{esc(desc)}</p><figure class="gvArticlePhoto"><img src="{esc(image_url)}" width="1200" height="675" loading="eager" decoding="async" alt="{esc(editorial_image_alt(item))}"><figcaption>Konuyla ilgili temsili fotoğraf</figcaption></figure>{sections}<div class="notice">{esc(source_date)}Kaynak: <a href="{esc(item['source'])}" target="_blank" rel="noopener">{source_label}</a>. Resmî prosedürler değişebilir; başvuru öncesinde ilgili dış temsilcilik ve yetkili başvuru merkezinin güncel sayfasını kontrol edin.</div></article></div></section></main></body></html>'''
 
 
 def replace_editorial(path, cards):
@@ -90,7 +99,7 @@ def replace_editorial(path, cards):
 
 
 def card(item, kind):
-    return f'<article class="gvStory"><img src="{esc(item["image"])}" alt="{esc(item["title"])}" loading="lazy"><div><span>{"HABER" if kind=="haberler" else "REHBER"}</span><h3><a href="/{kind}/{esc(item["slug"])}/">{esc(item["title"])}</a></h3><p>{esc(item["description"])}</p></div></article>'
+    return f'<article class="gvStory"><img src="{esc(editorial_image_url(item))}" alt="{esc(editorial_image_alt(item))}" loading="lazy"<div><span>{"HABER" if kind=="haberler" else "REHBER"}</span><h3><a href="/{kind}/{esc(item["slug"])}/">{esc(item["title"])}</a></h3><p>{esc(item["description"])}</p></div></article>'
 
 
 def publish_one(items, pubdate):
@@ -117,11 +126,27 @@ def refresh_indices(blog, news):
         item for item in sorted(blog, key=lambda x: x.get("priority", 99))
         if (ROOT / "blog" / item["slug"] / "index.html").is_file()
     ]
+    # Include existing hand-authored guides in the blog archive as well.
+    indexed = {item["slug"] for item in published_blog}
+    for page in sorted((ROOT / "blog").glob("*/index.html")):
+        slug = page.parent.name
+        if slug in indexed or slug not in topic_images():
+            continue
+        document = page.read_text(encoding="utf-8")
+        title_match = re.search(r"<h1[^>]*>(.*?)</h1>", document, re.S | re.I)
+        description_match = re.search(r'<meta name="description" content="([^"]*)"', document, re.I)
+        if not title_match or not description_match:
+            continue
+        page_title = html.unescape(re.sub(r"<[^>]+>", " ", title_match.group(1))).strip()
+        page_title = " ".join(page_title.split())
+        published_blog.append({"slug": slug, "title": page_title,
+                               "description": html.unescape(description_match.group(1)),
+                               "image": topic_images()[slug]["image"]})
     published_news = [
         item for item in news
         if (ROOT / "haberler" / item["slug"] / "index.html").is_file()
     ]
-    blog_cards = "\n".join(card(x, "blog") for x in published_blog[:12])
+    blog_cards = "\n".join(card(x, "blog") for x in published_blog)
     news_cards = "\n".join(card(x, "haberler") for x in reversed(published_news[-6:]))
     home_blog_cards = "\n".join(card(x, "blog") for x in published_blog[:8])
     replace_editorial("blog/index.html", blog_cards)

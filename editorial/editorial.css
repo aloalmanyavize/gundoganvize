@@ -90,3 +90,11 @@
   .gvArticleBody{padding-top:72px}
   .gvArticlePhoto img{max-height:220px;aspect-ratio:16/9}
 }
+
+/* Compact, subject-specific images in older manually written visa guides. */
+.gvTopicVisual{background:#f5f8fc;padding:22px 0 12px}
+.gvTopicVisual .wrap{max-width:1080px}
+.gvTopicVisual figure{margin:0 auto;max-width:950px}
+.gvTopicVisual img{display:block;width:100%;height:300px;max-height:300px;object-fit:cover;object-position:center;border-radius:19px;box-shadow:0 14px 38px rgba(5,32,58,.12)}
+.gvTopicVisual figcaption{margin:9px 3px 0;color:#637488;font-size:12px;line-height:1.5}
+@media(max-width:640px){.gvTopicVisual{padding:16px 0 6px}.gvTopicVisual img{height:195px;max-height:195px;border-radius:13px}}
