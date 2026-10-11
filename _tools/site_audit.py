@@ -59,6 +59,7 @@ def resolve_local(value: str, page: Path) -> Path | None:
     return candidate
 
 def main() -> int:
+    expected_nav = ["/ulkeler/","/#hizmetler","/gerekli-evraklar/","/randevu-talebi/","/blog/","/haberler/","/#iletisim"]
     errors, warnings = [], []
     pages = sorted(
         p for p in ROOT.rglob("index.html")
@@ -81,6 +82,13 @@ def main() -> int:
         except Exception as exc:
             errors.append(f"{rel}: HTML parsing error: {exc}")
             continue
+        header_nav = re.search(r'<header\b[^>]*>[\s\S]*?<nav\b[^>]*>([\s\S]*?)</nav>', s, re.I)
+        if header_nav is None:
+            errors.append(f"{rel}: primary navigation missing")
+        else:
+            menu_hrefs = re.findall(r'<a\b[^>]*href="([^"]+)"', header_nav.group(1), re.I)
+            if menu_hrefs != expected_nav:
+                errors.append(f"{rel}: inconsistent primary navigation {menu_hrefs}")
         if doc.h1 != 1:
             errors.append(f"{rel}: expected one H1, found {doc.h1}")
         for href in doc.links:
@@ -107,6 +115,7 @@ def main() -> int:
         ('services anchor', 'id="hizmetler"' in home),
         ('country selector', 'id="countryFilter"' in countries and 'id="countryResults"' in countries),
         ('styles repair import', "/site-repair.css" in (ROOT / "styles.css").read_text()),
+        ('premium CSS loaded', "/premium-unified.css" in (ROOT / "styles.css").read_text()),
     ]
     for label, good in layout_checks:
         if not good:
