@@ -128,6 +128,11 @@ def main() -> int:
             errors.append(f"{faq_path}: FAQ styles missing")
         if '"@type":"FAQPage"' not in page_html:
             errors.append(f"{faq_path}: matching FAQ structured data missing")
+    generated_slugs = ["avusturya","belcika","bulgaristan","hirvatistan","cekya","danimarka","estonya","finlandiya","fransa","yunanistan","macaristan","izlanda","italya","letonya","lihtenstayn","litvanya","luksemburg","malta","hollanda","norvec","polonya","portekiz","romanya","slovakya","slovenya","ispanya","isvec","isvicre"]
+    for slug in generated_slugs:
+        content = (ROOT / (slug + "-vizesi/index.html")).read_text(encoding="utf-8")
+        if 'id="ulkeye-ozel"' not in content or '/country-deep.css' not in content:
+            errors.append(f"{slug}: unique country guide content or style missing")
     for label, good in layout_checks:
         if not good:
             errors.append("critical layout: " + label)
