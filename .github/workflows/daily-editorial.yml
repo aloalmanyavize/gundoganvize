@@ -8,6 +8,9 @@ on:
       - '_tools/editorial_publish.py'
       - '.github/workflows/daily-editorial.yml'
       - '_tools/check_sitemap.py'
+      - '_tools/site_audit.py'
+      - 'site-repair.css'
+      - 'styles.css'
       - 'blog/index.html'
       - 'blog/*/index.html'
       - 'fransa-vizesi/index.html'
@@ -76,6 +79,8 @@ jobs:
               assert 'gvStory' in c
           print('Editorial smoke test passed;', len(blog), 'blog pages;', len(news), 'news pages')
           PY
+      - name: Audit complete site link and HTML structure
+        run: python _tools/site_audit.py
       - name: Verify priority URLs remain in sitemap
         run: python _tools/check_sitemap.py
       - name: Verify France landing and conversion links
@@ -131,6 +136,8 @@ jobs:
           else
             python _tools/editorial_publish.py --publish-one
           fi
+      - name: Audit all public pages before publishing
+        run: python _tools/site_audit.py
       - name: Validate sitemap and priority landing pages
         run: python _tools/check_sitemap.py
       - name: Commit generated pages with safe retry
