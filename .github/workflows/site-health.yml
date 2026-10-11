@@ -1,0 +1,52 @@
+name: Gündoğan Vize – Site Health
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - '**/*.css'
+      - '_tools/site_audit.py'
+      - '.github/workflows/site-health.yml'
+      - 'editorial/**'
+  pull_request:
+    paths:
+      - '**/*.html'
+      - '**/*.css'
+      - '_tools/site_audit.py'
+      - '.github/workflows/site-health.yml'
+      - 'editorial/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gundoganvize-site-health-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  structure-and-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit all public pages, internal links, and key layouts
+        run: python _tools/site_audit.py
+      - name: Confirm critical public assets
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          required = [
+              "styles.css", "styles-core.css", "site-repair.css",
+              "premium-3d.css", "home-premium.css",
+              "blog/index.html", "haberler/index.html", "ulkeler/index.html",
+              "gerekli-evraklar/index.html", "randevu-talebi/index.html",
+              "assets/gundogan-vize-premium-logo.svg",
+          ]
+          missing = [name for name in required if not Path(name).is_file()]
+          assert not missing, "Missing critical assets: " + ", ".join(missing)
+          print("Critical page and stylesheet assets are present.")
+          PY
