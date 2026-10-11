@@ -121,6 +121,23 @@ def main() -> int:
         ('about 13 years', '13 yıllık' in (ROOT / 'hakkimizda/index.html').read_text(encoding='utf-8')),
         ('premium CSS loaded', "/premium-unified.css" in (ROOT / "styles.css").read_text()),
     ]
+    # Quality gates for current high-priority content and first-party VIS illustration.
+    guide_min_words = {"amerika": 850, "ingiltere": 800, "avustralya": 850}
+    for slug, minimum_words in guide_min_words.items():
+        guide = (ROOT / f"{slug}-vizesi/index.html").read_text(encoding="utf-8")
+        visible = re.sub(r"<[^>]+>", " ", re.sub(r"<script[\\s\\S]*?</script>", "", guide, flags=re.I))
+        if len(visible.split()) < minimum_words or guide.count("gvCountryDepth20261012") < 3:
+            errors.append(f"{slug}: visitor guide missing detailed procedure sections")
+        if "/hakkimizda/" not in guide or 'id="sss"' not in guide:
+            errors.append(f"{slug}: about/FAQ navigation missing")
+    image_path = "/assets/editorial/vis-biyometri.svg"
+    if not (ROOT / image_path.lstrip("/")).is_file():
+        errors.append("VIS image asset is missing")
+    if image_path not in blog:
+        errors.append("VIS blog card does not reference a local image")
+    about = (ROOT / "hakkimizda/index.html").read_text(encoding="utf-8")
+    if "13 yıllık" not in about.lower() or "/hakkimizda/" not in home:
+        errors.append("13-year about experience or homepage link missing")
     faq_pages = ["index.html", "randevu-talebi/index.html", "ulkeler/index.html", "blog/index.html"]
     for faq_path in faq_pages:
         page_html = (ROOT / faq_path).read_text(encoding="utf-8")
