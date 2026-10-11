@@ -68,5 +68,17 @@ jobs:
             echo "No country page changes"
           else
             git commit -m "Daily SEO: refresh Schengen country pages [skip ci]"
-            git push
+            # Editorial publishing can update main simultaneously; rebase before pushing.
+            for attempt in 1 2 3; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then
+                echo "Country pages published successfully"
+                exit 0
+              fi
+              echo "Remote changed during publish; retrying ($attempt/3)"
+              sleep $((attempt * 3))
+            done
+            echo "Could not publish generated pages after three attempts"
+            exit 1
           fi
