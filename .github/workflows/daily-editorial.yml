@@ -28,8 +28,6 @@ on:
       - 'site-repair.css'
       - 'styles.css'
       - '.github/workflows/daily-editorial.yml'
-  schedule:
-    - cron: '25 6 * * *'
   workflow_dispatch:
 
 permissions:
