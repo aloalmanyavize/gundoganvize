@@ -31,6 +31,24 @@ def main():
         assert p.path.endswith("/"), f"Missing trailing slash: {url}"
         page = ROOT / p.path.lstrip("/") / "index.html"
         assert page.is_file(), f"Sitemap URL has no source page: {url}"
+    # Every public, indexable landing page must be represented.
+    import re
+    excluded = {"8d-wall-privacy", "node_modules", "dist"}
+    expected = {BASE + "/"}
+    for page in ROOT.rglob("index.html"):
+        relative = page.relative_to(ROOT)
+        if relative == Path("index.html"):
+            continue
+        if any(part.startswith((".", "_")) for part in relative.parts):
+            continue
+        if relative.parts[0] in excluded:
+            continue
+        html = page.read_text(encoding="utf-8")
+        if re.search(r'<meta[^>]+name=["\\\']robots["\\\'][^>]+content=["\\\'][^"\\\']*noindex', html, re.I):
+            continue
+        expected.add(BASE + "/" + "/".join(relative.parts[:-1]) + "/")
+    missing_pages = sorted(expected - set(urls))
+    assert not missing_pages, f"Indexable pages missing from sitemap: {missing_pages}"
     print(f"Sitemap verified: {len(urls)} unique, source-backed canonical URLs.")
 
 if __name__ == "__main__":
