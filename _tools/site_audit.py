@@ -115,10 +115,10 @@ def main() -> int:
         ('services anchor', 'id="hizmetler"' in home),
         ('country selector', 'id="countryFilter"' in countries and 'id="countryResults"' in countries),
         ('global visas', all(f'/{slug}-vizesi/' in countries for slug in ('amerika','ingiltere','avustralya'))),
-        ('13-year experience', '13 yıllık' in (ROOT / 'hakkimizda/index.html').read_text(encoding='utf-8').lower()),
+        ('2012 founding year', '2012' in (ROOT / 'hakkimizda/index.html').read_text(encoding='utf-8').lower()),
         ('styles repair import', "/site-repair.css" in (ROOT / "styles.css").read_text()),
         ('about navigation', 'href="/hakkimizda/"' in home),
-        ('about 13 years', '13 yıllık' in (ROOT / 'hakkimizda/index.html').read_text(encoding='utf-8')),
+        ('about founding year 2012', '2012' in (ROOT / 'hakkimizda/index.html').read_text(encoding='utf-8')),
         ('premium CSS loaded', "/premium-unified.css" in (ROOT / "styles.css").read_text()),
     ]
     # Quality gates for current high-priority content and first-party VIS illustration.
@@ -136,8 +136,8 @@ def main() -> int:
     if image_path not in blog:
         errors.append("VIS blog card does not reference a local image")
     about = (ROOT / "hakkimizda/index.html").read_text(encoding="utf-8")
-    if "13 yıllık" not in about.lower() or "/hakkimizda/" not in home:
-        errors.append("13-year about experience or homepage link missing")
+    if "2012" not in about.lower() or "/hakkimizda/" not in home:
+        errors.append("2012 founding year or homepage link missing")
     faq_pages = ["index.html", "randevu-talebi/index.html", "ulkeler/index.html", "blog/index.html"]
     for faq_path in faq_pages:
         page_html = (ROOT / faq_path).read_text(encoding="utf-8")
