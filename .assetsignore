@@ -7,3 +7,17 @@ README.md
 _worker.js
 wrangler.toml
 .assetsignore
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.sql
+*.sqlite
+*.db
+*.bak
+*.backup
+*.old
+node_modules/
+__pycache__/
