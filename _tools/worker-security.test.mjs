@@ -82,3 +82,37 @@ test("pages.dev preview remains noindex and does not receive custom-domain HSTS"
   assert.equal(response.headers.get("x-robots-tag"), "noindex, nofollow");
   assert.equal(response.headers.get("strict-transport-security"), null);
 });
+
+test("encoded dotfiles, source paths and backup extensions are rejected before assets", async () => {
+  const paths = [
+    "/%2eenv", "/%252eenv", "/.hg/store", "/secret/.npmrc",
+    "/_tools%2Fcheck_sitemap.py", "/folder%5c_worker.js",
+    "/backup.sql", "/archive.bak", "/cert.pem", "/private.key",
+  ];
+  for (const path of paths) {
+    const env = mockEnv();
+    const response = await worker.fetch(new Request("https://gundoganvize.com" + path), env);
+    assert.equal(response.status, 404, path);
+    assert.equal(env.requests.length, 0, path);
+  }
+});
+
+test("404 responses are non-indexable and do not acquire a fake canonical", async () => {
+  const env = mockEnv();
+  env.ASSETS.fetch = async () => new Response("<html><head></head><body>Not found</body></html>", {
+    status: 404,
+    headers: { "Content-Type": "text/html; charset=utf-8", "X-Robots-Tag": "index, follow" },
+  });
+  const response = await worker.fetch(new Request("https://gundoganvize.com/nonexistent-page/"), env);
+  assert.equal(response.status, 404);
+  assert.equal(response.headers.get("x-robots-tag"), "noindex, nofollow");
+  assert.doesNotMatch(await response.text(), /rel="canonical"/);
+});
+
+test("form action is restricted without blocking WhatsApp navigation", async () => {
+  const env = mockEnv();
+  const response = await worker.fetch(new Request("https://gundoganvize.com/randevu-talebi/"), env);
+  const csp = response.headers.get("content-security-policy");
+  assert.match(csp, /form-action 'self'/);
+  assert.match(csp, /https:\/\/wa\.me/);
+});
