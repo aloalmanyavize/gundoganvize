@@ -9,6 +9,10 @@ on:
       - '_tools/site_audit.py'
       - '.github/workflows/site-health.yml'
       - 'editorial/**'
+      - '_worker.js'
+      - '_headers'
+      - 'wrangler.toml'
+      - '_tools/worker-security.test.mjs'
   pull_request:
     paths:
       - '**/*.html'
@@ -16,6 +20,10 @@ on:
       - '_tools/site_audit.py'
       - '.github/workflows/site-health.yml'
       - 'editorial/**'
+      - '_worker.js'
+      - '_headers'
+      - 'wrangler.toml'
+      - '_tools/worker-security.test.mjs'
   workflow_dispatch:
 
 permissions:
@@ -37,6 +45,11 @@ jobs:
         run: python -m py_compile _tools/generate_country_pages.py _tools/editorial_publish.py
       - name: Audit all public pages, internal links, and key layouts
         run: python _tools/site_audit.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test Worker security headers, private paths and SEO routes
+        run: node --test _tools/worker-security.test.mjs
       - name: Confirm critical public assets
         run: |
           python - <<'PY'
