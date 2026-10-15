@@ -52,3 +52,23 @@ html{scroll-padding-top:158px}
 #hizmetler .serviceCard>span{background:#f6e9d5!important;color:#92703d!important}
 .gvBlogArchive .gvStory,.gvNewsArchive .gvStory{border-radius:18px;overflow:hidden;box-shadow:0 8px 30px rgba(12,44,61,.07)}
 @media(prefers-reduced-motion:reduce){header .head>nav a,#hizmetler .serviceCard{transition:none!important;animation:none!important}}
+
+/* Country photo heroes: keep copy readable above the dark image overlay. */
+.visaHero h1,.visaHero h1 span,.countryHero h1,.countryHero h1 span{
+  color:#fff!important;
+  text-shadow:none!important;
+}
+.visaHero .badge,.countryHero .badge{
+  color:#102d42!important;
+  background:#f3e7d5!important;
+  border-color:#f3e7d5!important;
+}
+.visaHero .heroCtas .ghostBtn,.countryHero .heroCtas .ghostBtn{
+  color:#fff!important;
+  border-color:#fff!important;
+  background:rgba(7,31,43,.65)!important;
+}
+.visaHero .heroCtas a:focus-visible,.countryHero .heroCtas a:focus-visible{
+  outline:3px solid #fff;
+  outline-offset:4px;
+}
