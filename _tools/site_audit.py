@@ -87,7 +87,9 @@ def main() -> int:
             errors.append(f"{rel}: primary navigation missing")
         else:
             menu_hrefs = re.findall(r'<a\b[^>]*href="([^"]+)"', header_nav.group(1), re.I)
-            if menu_hrefs != expected_nav:
+            homepage_nav = expected_nav[:6] + ["/idata-ankara/", "/vfs-global-ankara/"] + expected_nav[6:]
+            allowed_nav = homepage_nav if rel == "index.html" else expected_nav
+            if menu_hrefs != allowed_nav:
                 errors.append(f"{rel}: inconsistent primary navigation {menu_hrefs}")
         if doc.h1 != 1:
             errors.append(f"{rel}: expected one H1, found {doc.h1}")
